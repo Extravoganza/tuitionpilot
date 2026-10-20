@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tuitionpilot"
+version = "0.1.0"
+description = "Policy-gated AI agent for international students' cross-border payments (FinTechathon 2026, Topic C)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Ekaterina Kulakova"}, {name = "Dinara Khasyanova"}]
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[tool.setuptools]
+packages = ["tuitionpilot"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
