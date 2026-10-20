@@ -6,6 +6,8 @@
 Theme: *AI as a Financial Participant*. **Topic C: Cross-border & Student Finance Assistant.**
 Team **Borderless Scholars**: Ekaterina Kulakova (lead), Dinara Khasyanova.
 
+**Live demo: <https://tuitionpilot-site.vercel.app/>** · Code: <https://github.com/Extravoganza/tuitionpilot>
+
 ---
 
 > **SIMULATION — NO REAL MONEY MOVES.** All rates, routes, payees and balances are fictional test data.
@@ -100,7 +102,7 @@ python -m tuitionpilot.backtest        # Monte-Carlo evaluation
 python tools/build_demo.py             # rebuilds demo/index.html from real engine runs
 ```
 
-Open `demo/index.html` in any browser, or deploy it to Vercel in one click (see [docs/DEPLOY.md](docs/DEPLOY.md)). It works offline and contains:
+Open the live demo at <https://tuitionpilot-site.vercel.app/>, open `demo/index.html` in any browser, or deploy it to Vercel in one click (see [docs/DEPLOY.md](docs/DEPLOY.md)). It works offline and contains:
 
 * a guided tour of the product;
 * six student money tools (transfer cost comparison, deadline-safe FX planner with a 2,000-path Monte-Carlo simulation, budget and runway, hidden-fee detector, student loan planner, invoice fraud check). They use the same fee, risk and guard logic as the engine, ported to JavaScript;
