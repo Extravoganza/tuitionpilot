@@ -1,0 +1,10 @@
+{
+  "check": "browser 'Plan my payment' vs tuitionpilot/treasury/optimizer.py (via planner_api.plan_for)",
+  "random_scenarios": 1500,
+  "candidates_compared": 30000,
+  "fields": "status, selected plan, safe date, start, and per candidate: route, schedule, feasible, total minor units, buffer, failed constraints, dates, tranche amounts, approvals needed",
+  "mismatches": 0,
+  "seed": 42,
+  "date": "2026-10-19",
+  "how": "tools/parity/planner_parity.mjs"
+}

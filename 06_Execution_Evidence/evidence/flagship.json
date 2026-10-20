@@ -1,0 +1,1402 @@
+{
+  "seed": 7,
+  "label": "SIMULATION — NO REAL MONEY MOVES",
+  "steps": [
+    {
+      "step": 1,
+      "title": "Load invoice",
+      "claim": "A fictional invoice for 45,000.00 CNY due 2026-09-03 is loaded.",
+      "result": {
+        "invoice_id": "INV-0001",
+        "extracted": {
+          "legal_name": "Shenzhen Demo University",
+          "account": "••••3333",
+          "bank_bic": "DEMOCNSZXXX",
+          "country": "CN",
+          "currency": "CNY",
+          "amount": "45000.00",
+          "due": "2026-09-03",
+          "reference": "SDU-2026-AUT-104233"
+        }
+      }
+    },
+    {
+      "step": 2,
+      "title": "Parse as untrusted data and compare with the verified payee",
+      "claim": "Invoice fields match the independently verified beneficiary version (MATCH_VERIFIED).",
+      "result": {
+        "status": "MATCH_VERIFIED",
+        "verified_version": {
+          "version_id": "BV-e84abc43c2b5",
+          "version": 1,
+          "legal_name": "Shenzhen Demo University",
+          "account": "•••• 3333",
+          "bank_bic": "DEMOCNSZXXX",
+          "country": "CN",
+          "currency": "CNY",
+          "created_at": "2026-04-01T03:00:00+00:00",
+          "origin": "onboarding"
+        },
+        "mismatched_fields": [],
+        "diff": [
+          {
+            "field": "legal_name",
+            "invoice": "Shenzhen Demo University",
+            "verified": "Shenzhen Demo University",
+            "match": true
+          },
+          {
+            "field": "account",
+            "invoice": "•••• 3333",
+            "verified": "•••• 3333",
+            "match": true
+          },
+          {
+            "field": "bank_bic",
+            "invoice": "DEMOCNSZXXX",
+            "verified": "DEMOCNSZXXX",
+            "match": true
+          },
+          {
+            "field": "country",
+            "invoice": "CN",
+            "verified": "CN",
+            "match": true
+          },
+          {
+            "field": "currency",
+            "invoice": "CNY",
+            "verified": "CNY",
+            "match": true
+          }
+        ],
+        "note": "Extraction from an invoice never verifies a payee; only an independent callback does."
+      }
+    },
+    {
+      "step": 3,
+      "title": "Compare five routes",
+      "claim": "Five routes are itemised. R4 is cheapest but late; R5's quote is stale; both are rejected.",
+      "result": {
+        "routes": [
+          {
+            "route_id": "R1",
+            "route": "Simulated bank wire",
+            "cost": {
+              "target": {
+                "minor": 4500000,
+                "ccy": "CNY",
+                "display": "45,000.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 304054055,
+                "ccy": "KZT",
+                "display": "3,040,540.55 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 3692964,
+                "ccy": "KZT",
+                "display": "36,929.64 KZT"
+              },
+              "variable_fee": {
+                "minor": 7693676,
+                "ccy": "KZT",
+                "display": "76,936.76 KZT"
+              },
+              "fixed_fee": {
+                "minor": 100000,
+                "ccy": "KZT",
+                "display": "1,000.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 45000,
+                "ccy": "KZT",
+                "display": "450.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 315585695,
+                "ccy": "KZT",
+                "display": "3,155,856.95 KZT"
+              },
+              "effective_rate": "70.130154",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01462240",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            },
+            "arrival_range": [
+              "2026-08-24",
+              "2026-08-26"
+            ],
+            "feasible": true,
+            "failed": []
+          },
+          {
+            "route_id": "R2",
+            "route": "Simulated fintech transfer",
+            "cost": {
+              "target": {
+                "minor": 4500000,
+                "ccy": "CNY",
+                "display": "45,000.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 304054055,
+                "ccy": "KZT",
+                "display": "3,040,540.55 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 1835336,
+                "ccy": "KZT",
+                "display": "18,353.36 KZT"
+              },
+              "variable_fee": {
+                "minor": 6117788,
+                "ccy": "KZT",
+                "display": "61,177.88 KZT"
+              },
+              "fixed_fee": {
+                "minor": 85000,
+                "ccy": "KZT",
+                "display": "850.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 18000,
+                "ccy": "KZT",
+                "display": "180.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 312110179,
+                "ccy": "KZT",
+                "display": "3,121,101.79 KZT"
+              },
+              "effective_rate": "69.357818",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01471120",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            },
+            "arrival_range": [
+              "2026-08-19",
+              "2026-08-21"
+            ],
+            "feasible": true,
+            "failed": []
+          },
+          {
+            "route_id": "R3",
+            "route": "Simulated multi-currency account",
+            "cost": {
+              "target": {
+                "minor": 4500000,
+                "ccy": "CNY",
+                "display": "45,000.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 304054055,
+                "ccy": "KZT",
+                "display": "3,040,540.55 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 1221100,
+                "ccy": "KZT",
+                "display": "12,211.00 KZT"
+              },
+              "variable_fee": {
+                "minor": 4579128,
+                "ccy": "KZT",
+                "display": "45,791.28 KZT"
+              },
+              "fixed_fee": {
+                "minor": 50000,
+                "ccy": "KZT",
+                "display": "500.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 12000,
+                "ccy": "KZT",
+                "display": "120.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 309916283,
+                "ccy": "KZT",
+                "display": "3,099,162.83 KZT"
+              },
+              "effective_rate": "68.870285",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01474080",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            },
+            "arrival_range": [
+              "2026-08-18",
+              "2026-08-20"
+            ],
+            "feasible": true,
+            "failed": []
+          },
+          {
+            "route_id": "R4",
+            "route": "Cheap but slow route",
+            "cost": {
+              "target": {
+                "minor": 4500000,
+                "ccy": "CNY",
+                "display": "45,000.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 304054055,
+                "ccy": "KZT",
+                "display": "3,040,540.55 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 914906,
+                "ccy": "KZT",
+                "display": "9,149.06 KZT"
+              },
+              "variable_fee": {
+                "minor": 3049690,
+                "ccy": "KZT",
+                "display": "30,496.90 KZT"
+              },
+              "fixed_fee": {
+                "minor": 25000,
+                "ccy": "KZT",
+                "display": "250.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 10000,
+                "ccy": "KZT",
+                "display": "100.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 308053651,
+                "ccy": "KZT",
+                "display": "3,080,536.51 KZT"
+              },
+              "effective_rate": "68.456367",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01475560",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            },
+            "arrival_range": [
+              "2026-08-26",
+              "2026-08-31"
+            ],
+            "feasible": false,
+            "failed": [
+              "deadline: latest arrival 2026-08-31 vs latest safe 2026-08-27; 1 tranche(s) late"
+            ]
+          },
+          {
+            "route_id": "R5",
+            "route": "Stale quote route",
+            "cost": {
+              "target": {
+                "minor": 4500000,
+                "ccy": "CNY",
+                "display": "45,000.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 304054055,
+                "ccy": "KZT",
+                "display": "3,040,540.55 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 1527909,
+                "ccy": "KZT",
+                "display": "15,279.09 KZT"
+              },
+              "variable_fee": {
+                "minor": 4583730,
+                "ccy": "KZT",
+                "display": "45,837.30 KZT"
+              },
+              "fixed_fee": {
+                "minor": 30000,
+                "ccy": "KZT",
+                "display": "300.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 13000,
+                "ccy": "KZT",
+                "display": "130.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 310208694,
+                "ccy": "KZT",
+                "display": "3,102,086.94 KZT"
+              },
+              "effective_rate": "68.935265",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01472600",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            },
+            "arrival_range": [
+              "2026-08-19",
+              "2026-08-21"
+            ],
+            "feasible": false,
+            "failed": [
+              "quote_freshness: quote age 1440 min, TTL 30 min"
+            ]
+          }
+        ],
+        "quotes": [
+          {
+            "quote_id": "Q-R1-202608170300",
+            "route": {
+              "route_id": "R1",
+              "name": "Simulated bank wire",
+              "fixed_fee_minor": 100000,
+              "variable_fee_pct": "0.025",
+              "intermediary_fee_minor": 45000,
+              "fx_spread_pct": "0.012",
+              "arrival_bd": [
+                5,
+                7
+              ],
+              "supports_reference": true
+            },
+            "mid": {
+              "base": "KZT",
+              "quote": "CNY",
+              "value": "0.01480",
+              "label": "CNY per 1 KZT"
+            },
+            "quoted_at": "2026-08-17T03:00:00+00:00",
+            "expires_at": "2026-08-17T03:30:00+00:00",
+            "source": "FIXTURE",
+            "data_class": "SIMULATED",
+            "age_minutes": 0,
+            "freshness": "FRESH"
+          },
+          {
+            "quote_id": "Q-R2-202608170300",
+            "route": {
+              "route_id": "R2",
+              "name": "Simulated fintech transfer",
+              "fixed_fee_minor": 85000,
+              "variable_fee_pct": "0.02",
+              "intermediary_fee_minor": 18000,
+              "fx_spread_pct": "0.006",
+              "arrival_bd": [
+                2,
+                4
+              ],
+              "supports_reference": true
+            },
+            "mid": {
+              "base": "KZT",
+              "quote": "CNY",
+              "value": "0.01480",
+              "label": "CNY per 1 KZT"
+            },
+            "quoted_at": "2026-08-17T03:00:00+00:00",
+            "expires_at": "2026-08-17T03:30:00+00:00",
+            "source": "FIXTURE",
+            "data_class": "SIMULATED",
+            "age_minutes": 0,
+            "freshness": "FRESH"
+          },
+          {
+            "quote_id": "Q-R3-202608170300",
+            "route": {
+              "route_id": "R3",
+              "name": "Simulated multi-currency account",
+              "fixed_fee_minor": 50000,
+              "variable_fee_pct": "0.015",
+              "intermediary_fee_minor": 12000,
+              "fx_spread_pct": "0.004",
+              "arrival_bd": [
+                1,
+                3
+              ],
+              "supports_reference": true
+            },
+            "mid": {
+              "base": "KZT",
+              "quote": "CNY",
+              "value": "0.01480",
+              "label": "CNY per 1 KZT"
+            },
+            "quoted_at": "2026-08-17T03:00:00+00:00",
+            "expires_at": "2026-08-17T03:30:00+00:00",
+            "source": "FIXTURE",
+            "data_class": "SIMULATED",
+            "age_minutes": 0,
+            "freshness": "FRESH"
+          },
+          {
+            "quote_id": "Q-R4-202608170300",
+            "route": {
+              "route_id": "R4",
+              "name": "Cheap but slow route",
+              "fixed_fee_minor": 25000,
+              "variable_fee_pct": "0.01",
+              "intermediary_fee_minor": 10000,
+              "fx_spread_pct": "0.003",
+              "arrival_bd": [
+                7,
+                10
+              ],
+              "supports_reference": true
+            },
+            "mid": {
+              "base": "KZT",
+              "quote": "CNY",
+              "value": "0.01480",
+              "label": "CNY per 1 KZT"
+            },
+            "quoted_at": "2026-08-17T03:00:00+00:00",
+            "expires_at": "2026-08-17T03:30:00+00:00",
+            "source": "FIXTURE",
+            "data_class": "SIMULATED",
+            "age_minutes": 0,
+            "freshness": "FRESH"
+          },
+          {
+            "quote_id": "Q-R5-202608160300",
+            "route": {
+              "route_id": "R5",
+              "name": "Stale quote route",
+              "fixed_fee_minor": 30000,
+              "variable_fee_pct": "0.015",
+              "intermediary_fee_minor": 13000,
+              "fx_spread_pct": "0.005",
+              "arrival_bd": [
+                2,
+                4
+              ],
+              "supports_reference": true
+            },
+            "mid": {
+              "base": "KZT",
+              "quote": "CNY",
+              "value": "0.01480",
+              "label": "CNY per 1 KZT"
+            },
+            "quoted_at": "2026-08-16T03:00:00+00:00",
+            "expires_at": "2026-08-16T03:30:00+00:00",
+            "source": "FIXTURE",
+            "data_class": "SIMULATED",
+            "age_minutes": 1440,
+            "freshness": "STALE"
+          }
+        ]
+      }
+    },
+    {
+      "step": 4,
+      "title": "Generate plans and select",
+      "claim": "Selected R3 all_at_once at 3,099,162.83 KZT; 11 of 20 candidates are infeasible.",
+      "result": {
+        "status": "FEASIBLE",
+        "selected": {
+          "candidate_id": "C09",
+          "route_id": "R3",
+          "route_name": "Simulated multi-currency account",
+          "strategy": "all_at_once",
+          "feasible": true,
+          "result": "FEASIBLE",
+          "total_all_in_known": "3,099,162.83 KZT",
+          "total_minor": 309916283,
+          "deadline_buffer_bd": 5,
+          "operations": 1,
+          "needs_approval": [
+            "POL-005 above autonomous cap",
+            "POL-009 FX share above limit"
+          ],
+          "remaining_fx_exposure_after_first": "0.00 CNY",
+          "constraints": {
+            "deadline": {
+              "pass": true,
+              "detail": "latest arrival 2026-08-20 vs latest safe 2026-08-27"
+            },
+            "quote_freshness": {
+              "pass": true,
+              "detail": "quote age 0 min, TTL 30 min"
+            },
+            "liquidity_reserve": {
+              "pass": true,
+              "detail": "lowest headroom above reserve 200,837.17 KZT on 2026-08-24"
+            },
+            "beneficiary_verified": {
+              "pass": true,
+              "detail": "beneficiary status VERIFIED"
+            },
+            "route_allowed": {
+              "pass": true,
+              "detail": "route available and approved"
+            },
+            "kill_switch": {
+              "pass": true,
+              "detail": "off"
+            },
+            "hard_caps": {
+              "pass": true,
+              "detail": "within per-payment and 30-day caps"
+            },
+            "no_duplicate": {
+              "pass": true,
+              "detail": "no prior execution"
+            }
+          },
+          "failed": [],
+          "tranches": [
+            {
+              "index": 0,
+              "execution_date": "2026-08-17",
+              "target": "45,000.00 CNY",
+              "all_in_known": "3,099,162.83 KZT",
+              "arrival_range": [
+                "2026-08-18",
+                "2026-08-20"
+              ],
+              "priced_with_shock": false,
+              "cost": {
+                "target": {
+                  "minor": 4500000,
+                  "ccy": "CNY",
+                  "display": "45,000.00 CNY"
+                },
+                "principal_at_mid": {
+                  "minor": 304054055,
+                  "ccy": "KZT",
+                  "display": "3,040,540.55 KZT"
+                },
+                "fx_spread_cost": {
+                  "minor": 1221100,
+                  "ccy": "KZT",
+                  "display": "12,211.00 KZT"
+                },
+                "variable_fee": {
+                  "minor": 4579128,
+                  "ccy": "KZT",
+                  "display": "45,791.28 KZT"
+                },
+                "fixed_fee": {
+                  "minor": 50000,
+                  "ccy": "KZT",
+                  "display": "500.00 KZT"
+                },
+                "intermediary_fee": {
+                  "minor": 12000,
+                  "ccy": "KZT",
+                  "display": "120.00 KZT"
+                },
+                "all_in_known": {
+                  "minor": 309916283,
+                  "ccy": "KZT",
+                  "display": "3,099,162.83 KZT"
+                },
+                "effective_rate": "68.870285",
+                "effective_rate_label": "KZT per 1 CNY, all-in",
+                "rate_used": {
+                  "base": "KZT",
+                  "quote": "CNY",
+                  "value": "0.01474080",
+                  "label": "CNY per 1 KZT"
+                },
+                "estimated_extras": [
+                  "receiving-bank charges, if any, are not known (TBD)"
+                ]
+              }
+            }
+          ]
+        },
+        "rejected": [
+          {
+            "candidate_id": "C01",
+            "route_id": "R1",
+            "strategy": "all_at_once",
+            "why": "feasible but costs 56,694.12 KZT more"
+          },
+          {
+            "candidate_id": "C02",
+            "route_id": "R1",
+            "strategy": "weekly_4",
+            "why": "INFEASIBLE: deadline: latest arrival 2026-09-16 vs latest safe 2026-08-27; 3 tranche(s) late"
+          },
+          {
+            "candidate_id": "C03",
+            "route_id": "R1",
+            "strategy": "front_loaded_in_window",
+            "why": "feasible but costs 58,144.12 KZT more"
+          },
+          {
+            "candidate_id": "C04",
+            "route_id": "R1",
+            "strategy": "equal_in_window",
+            "why": "feasible but costs 58,144.13 KZT more"
+          },
+          {
+            "candidate_id": "C05",
+            "route_id": "R2",
+            "strategy": "all_at_once",
+            "why": "feasible but costs 21,938.96 KZT more"
+          },
+          {
+            "candidate_id": "C06",
+            "route_id": "R2",
+            "strategy": "weekly_4",
+            "why": "INFEASIBLE: deadline: latest arrival 2026-09-11 vs latest safe 2026-08-27; 3 tranche(s) late"
+          },
+          {
+            "candidate_id": "C07",
+            "route_id": "R2",
+            "strategy": "front_loaded_in_window",
+            "why": "feasible but costs 25,028.99 KZT more"
+          },
+          {
+            "candidate_id": "C08",
+            "route_id": "R2",
+            "strategy": "equal_in_window",
+            "why": "feasible but costs 25,028.97 KZT more"
+          },
+          {
+            "candidate_id": "C10",
+            "route_id": "R3",
+            "strategy": "weekly_4",
+            "why": "INFEASIBLE: deadline: latest arrival 2026-09-10 vs latest safe 2026-08-27; 2 tranche(s) late"
+          },
+          {
+            "candidate_id": "C11",
+            "route_id": "R3",
+            "strategy": "front_loaded_in_window",
+            "why": "feasible but costs 1,860.03 KZT more"
+          },
+          {
+            "candidate_id": "C12",
+            "route_id": "R3",
+            "strategy": "equal_in_window",
+            "why": "feasible but costs 1,860.01 KZT more"
+          },
+          {
+            "candidate_id": "C13",
+            "route_id": "R4",
+            "strategy": "all_at_once",
+            "why": "INFEASIBLE: deadline: latest arrival 2026-08-31 vs latest safe 2026-08-27; 1 tranche(s) late"
+          },
+          {
+            "candidate_id": "C14",
+            "route_id": "R4",
+            "strategy": "weekly_4",
+            "why": "INFEASIBLE: deadline: latest arrival 2026-09-21 vs latest safe 2026-08-27; 4 tranche(s) late"
+          },
+          {
+            "candidate_id": "C15",
+            "route_id": "R4",
+            "strategy": "front_loaded_in_window",
+            "why": "INFEASIBLE: deadline: latest arrival 2026-08-31 vs latest safe 2026-08-27; 1 tranche(s) late"
+          },
+          {
+            "candidate_id": "C16",
+            "route_id": "R4",
+            "strategy": "equal_in_window",
+            "why": "INFEASIBLE: deadline: latest arrival 2026-08-31 vs latest safe 2026-08-27; 1 tranche(s) late"
+          },
+          {
+            "candidate_id": "C17",
+            "route_id": "R5",
+            "strategy": "all_at_once",
+            "why": "INFEASIBLE: quote_freshness: quote age 1440 min, TTL 30 min"
+          },
+          {
+            "candidate_id": "C18",
+            "route_id": "R5",
+            "strategy": "weekly_4",
+            "why": "INFEASIBLE: deadline: latest arrival 2026-09-11 vs latest safe 2026-08-27; 3 tranche(s) late; quote_freshness: quote age 1440 min, TTL 30 min"
+          },
+          {
+            "candidate_id": "C19",
+            "route_id": "R5",
+            "strategy": "front_loaded_in_window",
+            "why": "INFEASIBLE: quote_freshness: quote age 1440 min, TTL 30 min"
+          },
+          {
+            "candidate_id": "C20",
+            "route_id": "R5",
+            "strategy": "equal_in_window",
+            "why": "INFEASIBLE: quote_freshness: quote age 1440 min, TTL 30 min"
+          }
+        ],
+        "savings": {
+          "baseline": "Simulated bank wire, all at once",
+          "baseline_cost": "3,155,856.95 KZT",
+          "selected_cost": "3,099,162.83 KZT",
+          "savings": "56,694.12 KZT",
+          "savings_pct": "1.80",
+          "comparable": true,
+          "basis": "same target amount, both arrive by latest safe date, both priced from fixtures quoted at 2026-08-17T03:00:00+00:00",
+          "label": "SIMULATED — not a real or guaranteed saving"
+        },
+        "assumptions": [
+          "All quotes, fees, routes and the payee are SIMULATED fixtures, not live data.",
+          "Later tranches are priced at today's quote; each needs a fresh quote at execution (POL-015). Future rates are scenarios, not knowledge.",
+          "Each tranche is a separate transfer with its own fees; the university is assumed to accept part-payments (TBD).",
+          "Arrival uses the conservative end of each route's business-day range; holidays list is empty (TBD per corridor).",
+          "Receiving-bank charges are unknown and not included in the known all-in cost.",
+          "Ranking = lowest known all-in cost among feasible plans; deadline buffer and operations shown separately, not blended."
+        ]
+      }
+    },
+    {
+      "step": 5,
+      "title": "Stress FX ±5% and 3-day delay",
+      "claim": "Scenario outputs, not forecasts.",
+      "result": {
+        "scenarios": [
+          {
+            "scenario": "FX +5%",
+            "group": "fx",
+            "change": "KZT weaker by 5% for tranches after the first execution date",
+            "status": "FEASIBLE",
+            "selected": "R3 all_at_once",
+            "total": "3,099,162.83 KZT",
+            "total_minor": 309916283,
+            "deadline_buffer_bd": 5,
+            "lowest_headroom": "lowest headroom above reserve 200,837.17 KZT on 2026-08-24",
+            "feasible_candidates": 9,
+            "reasons_if_infeasible": [],
+            "cost_delta_vs_base": 0
+          },
+          {
+            "scenario": "FX -5%",
+            "group": "fx",
+            "change": "KZT stronger by 5% for tranches after the first execution date",
+            "status": "FEASIBLE",
+            "selected": "R3 equal_in_window",
+            "total": "2,984,827.50 KZT",
+            "total_minor": 298482750,
+            "deadline_buffer_bd": 0,
+            "lowest_headroom": "lowest headroom above reserve 315,172.50 KZT on 2026-08-24",
+            "feasible_candidates": 9,
+            "reasons_if_infeasible": [],
+            "cost_delta_vs_base": -11433533
+          },
+          {
+            "scenario": "Delay 3 business days",
+            "group": "delay",
+            "change": "every route arrives 3 business day(s) later",
+            "status": "FEASIBLE",
+            "selected": "R3 all_at_once",
+            "total": "3,099,162.83 KZT",
+            "total_minor": 309916283,
+            "deadline_buffer_bd": 2,
+            "lowest_headroom": "lowest headroom above reserve 200,837.17 KZT on 2026-08-24",
+            "feasible_candidates": 6,
+            "reasons_if_infeasible": [],
+            "cost_delta_vs_base": 0
+          }
+        ]
+      }
+    },
+    {
+      "step": 6,
+      "title": "Changed beneficiary details are blocked",
+      "claim": "A phishing invoice is denied for prompt injection (POL-018). A polite invoice with a new account creates a new, unverified beneficiary version and is denied too (POL-010); even if the student switched to it, a 48-hour hold applies until an independent callback (POL-011).",
+      "result": {
+        "phishing": {
+          "shield": {
+            "status": "MISMATCH_BLOCKED",
+            "verified_version": {
+              "version_id": "BV-e84abc43c2b5",
+              "version": 1,
+              "legal_name": "Shenzhen Demo University",
+              "account": "•••• 3333",
+              "bank_bic": "DEMOCNSZXXX",
+              "country": "CN",
+              "currency": "CNY",
+              "created_at": "2026-04-01T03:00:00+00:00",
+              "origin": "onboarding"
+            },
+            "mismatched_fields": [
+              "account",
+              "bank_bic",
+              "country"
+            ],
+            "diff": [
+              {
+                "field": "legal_name",
+                "invoice": "Shenzhen Demo University",
+                "verified": "Shenzhen Demo University",
+                "match": true
+              },
+              {
+                "field": "account",
+                "invoice": "•••• 6819",
+                "verified": "•••• 3333",
+                "match": false
+              },
+              {
+                "field": "bank_bic",
+                "invoice": "NWBKGB2LXXX",
+                "verified": "DEMOCNSZXXX",
+                "match": false
+              },
+              {
+                "field": "country",
+                "invoice": "GB",
+                "verified": "CN",
+                "match": false
+              },
+              {
+                "field": "currency",
+                "invoice": "CNY",
+                "verified": "CNY",
+                "match": true
+              }
+            ],
+            "note": "Extraction from an invoice never verifies a payee; only an independent callback does."
+          },
+          "flags": [
+            "PROMPT_INJECTION",
+            "BENEFICIARY_FIELDS_CHANGED",
+            "URGENCY_PRESSURE"
+          ],
+          "execution": {
+            "state": "NOT_EXECUTED",
+            "decision": "DENY",
+            "reason_codes": [
+              "INVOICE_INTEGRITY:PROMPT_INJECTION"
+            ],
+            "matched_rule_ids": [
+              "POL-018"
+            ],
+            "required_approval": null,
+            "expires_at": null,
+            "policy_version": "2.0.0"
+          }
+        },
+        "polite_change": {
+          "shield": {
+            "status": "MISMATCH_BLOCKED",
+            "verified_version": {
+              "version_id": "BV-e84abc43c2b5",
+              "version": 1,
+              "legal_name": "Shenzhen Demo University",
+              "account": "•••• 3333",
+              "bank_bic": "DEMOCNSZXXX",
+              "country": "CN",
+              "currency": "CNY",
+              "created_at": "2026-04-01T03:00:00+00:00",
+              "origin": "onboarding"
+            },
+            "mismatched_fields": [
+              "account"
+            ],
+            "diff": [
+              {
+                "field": "legal_name",
+                "invoice": "Shenzhen Demo University",
+                "verified": "Shenzhen Demo University",
+                "match": true
+              },
+              {
+                "field": "account",
+                "invoice": "•••• 4444",
+                "verified": "•••• 3333",
+                "match": false
+              },
+              {
+                "field": "bank_bic",
+                "invoice": "DEMOCNSZXXX",
+                "verified": "DEMOCNSZXXX",
+                "match": true
+              },
+              {
+                "field": "country",
+                "invoice": "CN",
+                "verified": "CN",
+                "match": true
+              },
+              {
+                "field": "currency",
+                "invoice": "CNY",
+                "verified": "CNY",
+                "match": true
+              }
+            ],
+            "note": "Extraction from an invoice never verifies a payee; only an independent callback does."
+          },
+          "flags": [
+            "BENEFICIARY_FIELDS_CHANGED"
+          ],
+          "execution": {
+            "state": "NOT_EXECUTED",
+            "decision": "DENY",
+            "reason_codes": [
+              "BENEFICIARY_MISMATCH"
+            ],
+            "matched_rule_ids": [
+              "POL-010"
+            ],
+            "required_approval": null,
+            "expires_at": null,
+            "policy_version": "2.0.0"
+          }
+        }
+      }
+    },
+    {
+      "step": 7,
+      "title": "Above the autonomous cap: exact approval required",
+      "claim": "Without approval the payment does not execute; an exact-action challenge is issued.",
+      "result": {
+        "attempt_without_approval": {
+          "state": "NOT_EXECUTED",
+          "decision": "ASK",
+          "reason_codes": [
+            "POLICY_RECHECKED_AT_EXECUTION",
+            "ABOVE_AUTONOMOUS_CAP",
+            "FX_SHARE_ABOVE_LIMIT"
+          ],
+          "matched_rule_ids": [
+            "POL-013",
+            "POL-005",
+            "POL-009"
+          ],
+          "required_approval": {
+            "type": "EXACT_ACTION",
+            "ttl_minutes": 15,
+            "binds": [
+              "intent_id",
+              "amount",
+              "currency_pair",
+              "beneficiary_version",
+              "route",
+              "quote",
+              "execution_date",
+              "policy_version"
+            ]
+          },
+          "expires_at": "2026-08-17T03:15:00+00:00",
+          "policy_version": "2.0.0"
+        },
+        "approval": {
+          "decision": "ASK",
+          "challenge": {
+            "approval_id": "APR-0001",
+            "fingerprint": "e5d45a72592063b2",
+            "status": "PENDING",
+            "expires_at": "2026-08-17T03:15:00+00:00",
+            "token_hash_prefix": "d47774dc"
+          },
+          "approval_screen": {
+            "amount_debited": "3,099,162.83 KZT",
+            "amount_credited": "45,000.00 CNY",
+            "currency_pair": "KZT/CNY",
+            "recipient": {
+              "version_id": "BV-e84abc43c2b5",
+              "version": 1,
+              "legal_name": "Shenzhen Demo University",
+              "account": "•••• 3333",
+              "bank_bic": "DEMOCNSZXXX",
+              "country": "CN",
+              "currency": "CNY",
+              "created_at": "2026-04-01T03:00:00+00:00",
+              "origin": "onboarding"
+            },
+            "route": "Simulated multi-currency account",
+            "quote_id": "Q-R3-202608170300",
+            "quote_expires_at": "2026-08-17T03:30:00+00:00",
+            "estimated_arrival": [
+              "2026-08-18",
+              "2026-08-20"
+            ],
+            "reference": "SDU-2026-AUT-104233",
+            "approval_expires_in_minutes": 15,
+            "consent_prechecked": false,
+            "label": "SIMULATION — NO REAL MONEY MOVES"
+          }
+        }
+      }
+    },
+    {
+      "step": 8,
+      "title": "Amount changed after approval: approval invalidated",
+      "claim": "The original approval no longer redeems; a new one is required for the exact action.",
+      "result": {
+        "mutated_amount": "3,100,162.83 KZT",
+        "result": {
+          "state": "NOT_EXECUTED",
+          "decision": "DENY",
+          "reason_codes": [
+            "APPROVAL_FINGERPRINT_MISMATCH"
+          ],
+          "matched_rule_ids": [
+            "POL-021"
+          ],
+          "required_approval": null,
+          "expires_at": null,
+          "policy_version": "2.0.0"
+        },
+        "first_challenge_status": "INVALIDATED",
+        "new_challenge": {
+          "approval_id": "APR-0002",
+          "fingerprint": "e5d45a72592063b2",
+          "status": "PENDING",
+          "expires_at": "2026-08-17T03:15:00+00:00",
+          "token_hash_prefix": "10cc6991"
+        }
+      }
+    },
+    {
+      "step": 9,
+      "title": "Execute once, time out, retry: no duplicate",
+      "claim": "One execution record, one simulated debit, after a timeout and two retries.",
+      "result": {
+        "timeout_raised": true,
+        "retry_1": {
+          "retried": true,
+          "state": "SIMULATED_SUBMITTED",
+          "decision": "ALLOW",
+          "execution_id": "EXE-0001",
+          "intent_id": "PI-0006",
+          "attempts": 2,
+          "environment": "SIMULATION",
+          "label": "SIMULATION — NO REAL MONEY MOVES"
+        },
+        "retry_2": {
+          "retried": true,
+          "decision": "RETURN_EXISTING",
+          "matched_rule_ids": [
+            "POL-017"
+          ],
+          "execution_id": "EXE-0001",
+          "intent_id": "PI-0006",
+          "state": "SIMULATED_SUBMITTED",
+          "attempts": 3,
+          "environment": "SIMULATION",
+          "label": "SIMULATION — NO REAL MONEY MOVES"
+        },
+        "executions": [
+          {
+            "execution_id": "EXE-0001",
+            "intent_id": "PI-0006",
+            "state": "SIMULATED_SUBMITTED",
+            "attempts": 3,
+            "environment": "SIMULATION",
+            "label": "SIMULATION — NO REAL MONEY MOVES"
+          }
+        ],
+        "simulated_debits": 1
+      }
+    },
+    {
+      "step": 10,
+      "title": "Verify the hash chain",
+      "claim": "Every event links to the previous one; a checkpoint is exported for tail-deletion checks.",
+      "result": {
+        "verify": {
+          "ok": true,
+          "events": 18,
+          "head_hash": "8b581931f62860fcb110d7c72bfb58b078d40170ca24382ddc29a128fa7d03fd"
+        },
+        "checkpoint": {
+          "sequence": 18,
+          "head_hash": "8b581931f62860fcb110d7c72bfb58b078d40170ca24382ddc29a128fa7d03fd",
+          "taken_at": "2026-08-17T03:00:00+00:00"
+        }
+      }
+    }
+  ],
+  "stress": [
+    {
+      "scenario": "Base case",
+      "group": "base",
+      "change": "fixtures as quoted",
+      "status": "FEASIBLE",
+      "selected": "R3 all_at_once",
+      "total": "3,099,162.83 KZT",
+      "total_minor": 309916283,
+      "deadline_buffer_bd": 5,
+      "lowest_headroom": "lowest headroom above reserve 200,837.17 KZT on 2026-08-24",
+      "feasible_candidates": 9,
+      "reasons_if_infeasible": [],
+      "cost_delta_vs_base": 0
+    },
+    {
+      "scenario": "FX +1%",
+      "group": "fx",
+      "change": "KZT weaker by 1% for tranches after the first execution date",
+      "status": "FEASIBLE",
+      "selected": "R3 all_at_once",
+      "total": "3,099,162.83 KZT",
+      "total_minor": 309916283,
+      "deadline_buffer_bd": 5,
+      "lowest_headroom": "lowest headroom above reserve 200,837.17 KZT on 2026-08-24",
+      "feasible_candidates": 9,
+      "reasons_if_infeasible": [],
+      "cost_delta_vs_base": 0
+    },
+    {
+      "scenario": "FX -1%",
+      "group": "fx",
+      "change": "KZT stronger by 1% for tranches after the first execution date",
+      "status": "FEASIBLE",
+      "selected": "R3 equal_in_window",
+      "total": "3,077,783.79 KZT",
+      "total_minor": 307778379,
+      "deadline_buffer_bd": 0,
+      "lowest_headroom": "lowest headroom above reserve 222,216.21 KZT on 2026-08-24",
+      "feasible_candidates": 9,
+      "reasons_if_infeasible": [],
+      "cost_delta_vs_base": -2137904
+    },
+    {
+      "scenario": "FX +3%",
+      "group": "fx",
+      "change": "KZT weaker by 3% for tranches after the first execution date",
+      "status": "FEASIBLE",
+      "selected": "R3 all_at_once",
+      "total": "3,099,162.83 KZT",
+      "total_minor": 309916283,
+      "deadline_buffer_bd": 5,
+      "lowest_headroom": "lowest headroom above reserve 200,837.17 KZT on 2026-08-24",
+      "feasible_candidates": 9,
+      "reasons_if_infeasible": [],
+      "cost_delta_vs_base": 0
+    },
+    {
+      "scenario": "FX -3%",
+      "group": "fx",
+      "change": "KZT stronger by 3% for tranches after the first execution date",
+      "status": "FEASIBLE",
+      "selected": "R3 equal_in_window",
+      "total": "3,031,305.66 KZT",
+      "total_minor": 303130566,
+      "deadline_buffer_bd": 0,
+      "lowest_headroom": "lowest headroom above reserve 268,694.34 KZT on 2026-08-24",
+      "feasible_candidates": 9,
+      "reasons_if_infeasible": [],
+      "cost_delta_vs_base": -6785717
+    },
+    {
+      "scenario": "FX +5%",
+      "group": "fx",
+      "change": "KZT weaker by 5% for tranches after the first execution date",
+      "status": "FEASIBLE",
+      "selected": "R3 all_at_once",
+      "total": "3,099,162.83 KZT",
+      "total_minor": 309916283,
+      "deadline_buffer_bd": 5,
+      "lowest_headroom": "lowest headroom above reserve 200,837.17 KZT on 2026-08-24",
+      "feasible_candidates": 9,
+      "reasons_if_infeasible": [],
+      "cost_delta_vs_base": 0
+    },
+    {
+      "scenario": "FX -5%",
+      "group": "fx",
+      "change": "KZT stronger by 5% for tranches after the first execution date",
+      "status": "FEASIBLE",
+      "selected": "R3 equal_in_window",
+      "total": "2,984,827.50 KZT",
+      "total_minor": 298482750,
+      "deadline_buffer_bd": 0,
+      "lowest_headroom": "lowest headroom above reserve 315,172.50 KZT on 2026-08-24",
+      "feasible_candidates": 9,
+      "reasons_if_infeasible": [],
+      "cost_delta_vs_base": -11433533
+    },
+    {
+      "scenario": "FX +10%",
+      "group": "fx",
+      "change": "KZT weaker by 10% for tranches after the first execution date",
+      "status": "FEASIBLE",
+      "selected": "R3 all_at_once",
+      "total": "3,099,162.83 KZT",
+      "total_minor": 309916283,
+      "deadline_buffer_bd": 5,
+      "lowest_headroom": "lowest headroom above reserve 200,837.17 KZT on 2026-08-24",
+      "feasible_candidates": 6,
+      "reasons_if_infeasible": [],
+      "cost_delta_vs_base": 0
+    },
+    {
+      "scenario": "FX -10%",
+      "group": "fx",
+      "change": "KZT stronger by 10% for tranches after the first execution date",
+      "status": "FEASIBLE",
+      "selected": "R3 equal_in_window",
+      "total": "2,868,632.13 KZT",
+      "total_minor": 286863213,
+      "deadline_buffer_bd": 0,
+      "lowest_headroom": "lowest headroom above reserve 431,367.87 KZT on 2026-08-24",
+      "feasible_candidates": 9,
+      "reasons_if_infeasible": [],
+      "cost_delta_vs_base": -23053070
+    },
+    {
+      "scenario": "Delay 1 business day",
+      "group": "delay",
+      "change": "every route arrives 1 business day(s) later",
+      "status": "FEASIBLE",
+      "selected": "R3 all_at_once",
+      "total": "3,099,162.83 KZT",
+      "total_minor": 309916283,
+      "deadline_buffer_bd": 4,
+      "lowest_headroom": "lowest headroom above reserve 200,837.17 KZT on 2026-08-24",
+      "feasible_candidates": 9,
+      "reasons_if_infeasible": [],
+      "cost_delta_vs_base": 0
+    },
+    {
+      "scenario": "Delay 3 business days",
+      "group": "delay",
+      "change": "every route arrives 3 business day(s) later",
+      "status": "FEASIBLE",
+      "selected": "R3 all_at_once",
+      "total": "3,099,162.83 KZT",
+      "total_minor": 309916283,
+      "deadline_buffer_bd": 2,
+      "lowest_headroom": "lowest headroom above reserve 200,837.17 KZT on 2026-08-24",
+      "feasible_candidates": 6,
+      "reasons_if_infeasible": [],
+      "cost_delta_vs_base": 0
+    },
+    {
+      "scenario": "Delay 5 business days",
+      "group": "delay",
+      "change": "every route arrives 5 business day(s) later",
+      "status": "FEASIBLE",
+      "selected": "R3 all_at_once",
+      "total": "3,099,162.83 KZT",
+      "total_minor": 309916283,
+      "deadline_buffer_bd": 0,
+      "lowest_headroom": "lowest headroom above reserve 200,837.17 KZT on 2026-08-24",
+      "feasible_candidates": 3,
+      "reasons_if_infeasible": [],
+      "cost_delta_vs_base": 0
+    },
+    {
+      "scenario": "Early rent",
+      "group": "liquidity",
+      "change": "rent and living costs due on the first day",
+      "status": "FEASIBLE",
+      "selected": "R3 equal_in_window",
+      "total": "3,101,022.84 KZT",
+      "total_minor": 310102284,
+      "deadline_buffer_bd": 0,
+      "lowest_headroom": "lowest headroom above reserve 198,977.16 KZT on 2026-08-24",
+      "feasible_candidates": 6,
+      "reasons_if_infeasible": [],
+      "cost_delta_vs_base": 186001
+    },
+    {
+      "scenario": "Sponsor funds 10 days late",
+      "group": "liquidity",
+      "change": "confirmed sponsor transfer arrives 10 days later",
+      "status": "INFEASIBLE",
+      "selected": null,
+      "total": null,
+      "total_minor": null,
+      "deadline_buffer_bd": null,
+      "lowest_headroom": null,
+      "feasible_candidates": 0,
+      "reasons_if_infeasible": [
+        "liquidity_reserve failed in 15 of 20 candidates",
+        "deadline failed in 8 of 20 candidates",
+        "quote_freshness failed in 4 of 20 candidates"
+      ]
+    },
+    {
+      "scenario": "Route outage R3",
+      "group": "operations",
+      "change": "route R3 unavailable",
+      "status": "FEASIBLE",
+      "selected": "R2 all_at_once",
+      "total": "3,121,101.79 KZT",
+      "total_minor": 312110179,
+      "deadline_buffer_bd": 4,
+      "lowest_headroom": "lowest headroom above reserve 178,898.21 KZT on 2026-08-24",
+      "feasible_candidates": 6,
+      "reasons_if_infeasible": [],
+      "cost_delta_vs_base": 2193896
+    },
+    {
+      "scenario": "Quotes go stale",
+      "group": "data",
+      "change": "60 minutes pass without a quote refresh",
+      "status": "INFEASIBLE",
+      "selected": null,
+      "total": null,
+      "total_minor": null,
+      "deadline_buffer_bd": null,
+      "lowest_headroom": null,
+      "feasible_candidates": 0,
+      "reasons_if_infeasible": [
+        "quote_freshness failed in 20 of 20 candidates",
+        "deadline failed in 8 of 20 candidates"
+      ]
+    },
+    {
+      "scenario": "Beneficiary details changed",
+      "group": "fraud",
+      "change": "latest payee version is unverified",
+      "status": "INFEASIBLE",
+      "selected": null,
+      "total": null,
+      "total_minor": null,
+      "deadline_buffer_bd": null,
+      "lowest_headroom": null,
+      "feasible_candidates": 0,
+      "reasons_if_infeasible": [
+        "beneficiary_verified failed in 20 of 20 candidates",
+        "deadline failed in 8 of 20 candidates",
+        "quote_freshness failed in 4 of 20 candidates"
+      ]
+    },
+    {
+      "scenario": "Counterfactual: start on 1 Aug",
+      "group": "counterfactual",
+      "change": "planning 16 days earlier (workbook dates)",
+      "status": "FEASIBLE",
+      "selected": "R4 all_at_once",
+      "total": "3,080,536.51 KZT",
+      "total_minor": 308053651,
+      "deadline_buffer_bd": 8,
+      "lowest_headroom": "lowest headroom above reserve 219,463.49 KZT on 2026-08-24",
+      "feasible_candidates": 13,
+      "reasons_if_infeasible": [],
+      "cost_delta_vs_base": -1862632
+    }
+  ],
+  "ledger_events": 18,
+  "policy_version": "2.0.0",
+  "app_version": "0.2.0"
+}

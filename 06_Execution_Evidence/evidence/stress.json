@@ -1,0 +1,5098 @@
+{
+  "base": {
+    "status": "FEASIBLE",
+    "policy_version": "2.0.0",
+    "latest_safe_arrival": "2026-08-27",
+    "effective_start": "2026-08-17",
+    "selected": {
+      "candidate_id": "C09",
+      "route_id": "R3",
+      "route_name": "Simulated multi-currency account",
+      "strategy": "all_at_once",
+      "feasible": true,
+      "result": "FEASIBLE",
+      "total_all_in_known": "3,099,162.83 KZT",
+      "total_minor": 309916283,
+      "deadline_buffer_bd": 5,
+      "operations": 1,
+      "needs_approval": [
+        "POL-005 above autonomous cap",
+        "POL-009 FX share above limit"
+      ],
+      "remaining_fx_exposure_after_first": "0.00 CNY",
+      "constraints": {
+        "deadline": {
+          "pass": true,
+          "detail": "latest arrival 2026-08-20 vs latest safe 2026-08-27"
+        },
+        "quote_freshness": {
+          "pass": true,
+          "detail": "quote age 0 min, TTL 30 min"
+        },
+        "liquidity_reserve": {
+          "pass": true,
+          "detail": "lowest headroom above reserve 200,837.17 KZT on 2026-08-24"
+        },
+        "beneficiary_verified": {
+          "pass": true,
+          "detail": "beneficiary status VERIFIED"
+        },
+        "route_allowed": {
+          "pass": true,
+          "detail": "route available and approved"
+        },
+        "kill_switch": {
+          "pass": true,
+          "detail": "off"
+        },
+        "hard_caps": {
+          "pass": true,
+          "detail": "within per-payment and 30-day caps"
+        },
+        "no_duplicate": {
+          "pass": true,
+          "detail": "no prior execution"
+        }
+      },
+      "failed": [],
+      "tranches": [
+        {
+          "index": 0,
+          "execution_date": "2026-08-17",
+          "target": "45,000.00 CNY",
+          "all_in_known": "3,099,162.83 KZT",
+          "arrival_range": [
+            "2026-08-18",
+            "2026-08-20"
+          ],
+          "priced_with_shock": false,
+          "cost": {
+            "target": {
+              "minor": 4500000,
+              "ccy": "CNY",
+              "display": "45,000.00 CNY"
+            },
+            "principal_at_mid": {
+              "minor": 304054055,
+              "ccy": "KZT",
+              "display": "3,040,540.55 KZT"
+            },
+            "fx_spread_cost": {
+              "minor": 1221100,
+              "ccy": "KZT",
+              "display": "12,211.00 KZT"
+            },
+            "variable_fee": {
+              "minor": 4579128,
+              "ccy": "KZT",
+              "display": "45,791.28 KZT"
+            },
+            "fixed_fee": {
+              "minor": 50000,
+              "ccy": "KZT",
+              "display": "500.00 KZT"
+            },
+            "intermediary_fee": {
+              "minor": 12000,
+              "ccy": "KZT",
+              "display": "120.00 KZT"
+            },
+            "all_in_known": {
+              "minor": 309916283,
+              "ccy": "KZT",
+              "display": "3,099,162.83 KZT"
+            },
+            "effective_rate": "68.870285",
+            "effective_rate_label": "KZT per 1 CNY, all-in",
+            "rate_used": {
+              "base": "KZT",
+              "quote": "CNY",
+              "value": "0.01474080",
+              "label": "CNY per 1 KZT"
+            },
+            "estimated_extras": [
+              "receiving-bank charges, if any, are not known (TBD)"
+            ]
+          }
+        }
+      ]
+    },
+    "baseline": {
+      "candidate_id": "C01",
+      "route_id": "R1",
+      "route_name": "Simulated bank wire",
+      "strategy": "all_at_once",
+      "feasible": true,
+      "result": "FEASIBLE",
+      "total_all_in_known": "3,155,856.95 KZT",
+      "total_minor": 315585695,
+      "deadline_buffer_bd": 1,
+      "operations": 1,
+      "needs_approval": [
+        "POL-005 above autonomous cap",
+        "POL-009 FX share above limit"
+      ],
+      "remaining_fx_exposure_after_first": "0.00 CNY",
+      "constraints": {
+        "deadline": {
+          "pass": true,
+          "detail": "latest arrival 2026-08-26 vs latest safe 2026-08-27"
+        },
+        "quote_freshness": {
+          "pass": true,
+          "detail": "quote age 0 min, TTL 30 min"
+        },
+        "liquidity_reserve": {
+          "pass": true,
+          "detail": "lowest headroom above reserve 144,143.05 KZT on 2026-08-24"
+        },
+        "beneficiary_verified": {
+          "pass": true,
+          "detail": "beneficiary status VERIFIED"
+        },
+        "route_allowed": {
+          "pass": true,
+          "detail": "route available and approved"
+        },
+        "kill_switch": {
+          "pass": true,
+          "detail": "off"
+        },
+        "hard_caps": {
+          "pass": true,
+          "detail": "within per-payment and 30-day caps"
+        },
+        "no_duplicate": {
+          "pass": true,
+          "detail": "no prior execution"
+        }
+      },
+      "failed": [],
+      "tranches": [
+        {
+          "index": 0,
+          "execution_date": "2026-08-17",
+          "target": "45,000.00 CNY",
+          "all_in_known": "3,155,856.95 KZT",
+          "arrival_range": [
+            "2026-08-24",
+            "2026-08-26"
+          ],
+          "priced_with_shock": false,
+          "cost": {
+            "target": {
+              "minor": 4500000,
+              "ccy": "CNY",
+              "display": "45,000.00 CNY"
+            },
+            "principal_at_mid": {
+              "minor": 304054055,
+              "ccy": "KZT",
+              "display": "3,040,540.55 KZT"
+            },
+            "fx_spread_cost": {
+              "minor": 3692964,
+              "ccy": "KZT",
+              "display": "36,929.64 KZT"
+            },
+            "variable_fee": {
+              "minor": 7693676,
+              "ccy": "KZT",
+              "display": "76,936.76 KZT"
+            },
+            "fixed_fee": {
+              "minor": 100000,
+              "ccy": "KZT",
+              "display": "1,000.00 KZT"
+            },
+            "intermediary_fee": {
+              "minor": 45000,
+              "ccy": "KZT",
+              "display": "450.00 KZT"
+            },
+            "all_in_known": {
+              "minor": 315585695,
+              "ccy": "KZT",
+              "display": "3,155,856.95 KZT"
+            },
+            "effective_rate": "70.130154",
+            "effective_rate_label": "KZT per 1 CNY, all-in",
+            "rate_used": {
+              "base": "KZT",
+              "quote": "CNY",
+              "value": "0.01462240",
+              "label": "CNY per 1 KZT"
+            },
+            "estimated_extras": [
+              "receiving-bank charges, if any, are not known (TBD)"
+            ]
+          }
+        }
+      ]
+    },
+    "savings": {
+      "baseline": "Simulated bank wire, all at once",
+      "baseline_cost": "3,155,856.95 KZT",
+      "selected_cost": "3,099,162.83 KZT",
+      "savings": "56,694.12 KZT",
+      "savings_pct": "1.80",
+      "comparable": true,
+      "basis": "same target amount, both arrive by latest safe date, both priced from fixtures quoted at 2026-08-17T03:00:00+00:00",
+      "label": "SIMULATED — not a real or guaranteed saving"
+    },
+    "assumptions": [
+      "All quotes, fees, routes and the payee are SIMULATED fixtures, not live data.",
+      "Later tranches are priced at today's quote; each needs a fresh quote at execution (POL-015). Future rates are scenarios, not knowledge.",
+      "Each tranche is a separate transfer with its own fees; the university is assumed to accept part-payments (TBD).",
+      "Arrival uses the conservative end of each route's business-day range; holidays list is empty (TBD per corridor).",
+      "Receiving-bank charges are unknown and not included in the known all-in cost.",
+      "Ranking = lowest known all-in cost among feasible plans; deadline buffer and operations shown separately, not blended."
+    ],
+    "reasons_if_infeasible": [],
+    "rejected": [
+      {
+        "candidate_id": "C01",
+        "route_id": "R1",
+        "strategy": "all_at_once",
+        "why": "feasible but costs 56,694.12 KZT more"
+      },
+      {
+        "candidate_id": "C02",
+        "route_id": "R1",
+        "strategy": "weekly_4",
+        "why": "INFEASIBLE: deadline: latest arrival 2026-09-16 vs latest safe 2026-08-27; 3 tranche(s) late"
+      },
+      {
+        "candidate_id": "C03",
+        "route_id": "R1",
+        "strategy": "front_loaded_in_window",
+        "why": "feasible but costs 58,144.12 KZT more"
+      },
+      {
+        "candidate_id": "C04",
+        "route_id": "R1",
+        "strategy": "equal_in_window",
+        "why": "feasible but costs 58,144.13 KZT more"
+      },
+      {
+        "candidate_id": "C05",
+        "route_id": "R2",
+        "strategy": "all_at_once",
+        "why": "feasible but costs 21,938.96 KZT more"
+      },
+      {
+        "candidate_id": "C06",
+        "route_id": "R2",
+        "strategy": "weekly_4",
+        "why": "INFEASIBLE: deadline: latest arrival 2026-09-11 vs latest safe 2026-08-27; 3 tranche(s) late"
+      },
+      {
+        "candidate_id": "C07",
+        "route_id": "R2",
+        "strategy": "front_loaded_in_window",
+        "why": "feasible but costs 25,028.99 KZT more"
+      },
+      {
+        "candidate_id": "C08",
+        "route_id": "R2",
+        "strategy": "equal_in_window",
+        "why": "feasible but costs 25,028.97 KZT more"
+      },
+      {
+        "candidate_id": "C10",
+        "route_id": "R3",
+        "strategy": "weekly_4",
+        "why": "INFEASIBLE: deadline: latest arrival 2026-09-10 vs latest safe 2026-08-27; 2 tranche(s) late"
+      },
+      {
+        "candidate_id": "C11",
+        "route_id": "R3",
+        "strategy": "front_loaded_in_window",
+        "why": "feasible but costs 1,860.03 KZT more"
+      },
+      {
+        "candidate_id": "C12",
+        "route_id": "R3",
+        "strategy": "equal_in_window",
+        "why": "feasible but costs 1,860.01 KZT more"
+      },
+      {
+        "candidate_id": "C13",
+        "route_id": "R4",
+        "strategy": "all_at_once",
+        "why": "INFEASIBLE: deadline: latest arrival 2026-08-31 vs latest safe 2026-08-27; 1 tranche(s) late"
+      },
+      {
+        "candidate_id": "C14",
+        "route_id": "R4",
+        "strategy": "weekly_4",
+        "why": "INFEASIBLE: deadline: latest arrival 2026-09-21 vs latest safe 2026-08-27; 4 tranche(s) late"
+      },
+      {
+        "candidate_id": "C15",
+        "route_id": "R4",
+        "strategy": "front_loaded_in_window",
+        "why": "INFEASIBLE: deadline: latest arrival 2026-08-31 vs latest safe 2026-08-27; 1 tranche(s) late"
+      },
+      {
+        "candidate_id": "C16",
+        "route_id": "R4",
+        "strategy": "equal_in_window",
+        "why": "INFEASIBLE: deadline: latest arrival 2026-08-31 vs latest safe 2026-08-27; 1 tranche(s) late"
+      },
+      {
+        "candidate_id": "C17",
+        "route_id": "R5",
+        "strategy": "all_at_once",
+        "why": "INFEASIBLE: quote_freshness: quote age 1440 min, TTL 30 min"
+      },
+      {
+        "candidate_id": "C18",
+        "route_id": "R5",
+        "strategy": "weekly_4",
+        "why": "INFEASIBLE: deadline: latest arrival 2026-09-11 vs latest safe 2026-08-27; 3 tranche(s) late; quote_freshness: quote age 1440 min, TTL 30 min"
+      },
+      {
+        "candidate_id": "C19",
+        "route_id": "R5",
+        "strategy": "front_loaded_in_window",
+        "why": "INFEASIBLE: quote_freshness: quote age 1440 min, TTL 30 min"
+      },
+      {
+        "candidate_id": "C20",
+        "route_id": "R5",
+        "strategy": "equal_in_window",
+        "why": "INFEASIBLE: quote_freshness: quote age 1440 min, TTL 30 min"
+      }
+    ],
+    "candidates": [
+      {
+        "candidate_id": "C01",
+        "route_id": "R1",
+        "route_name": "Simulated bank wire",
+        "strategy": "all_at_once",
+        "feasible": true,
+        "result": "FEASIBLE",
+        "total_all_in_known": "3,155,856.95 KZT",
+        "total_minor": 315585695,
+        "deadline_buffer_bd": 1,
+        "operations": 1,
+        "needs_approval": [
+          "POL-005 above autonomous cap",
+          "POL-009 FX share above limit"
+        ],
+        "remaining_fx_exposure_after_first": "0.00 CNY",
+        "constraints": {
+          "deadline": {
+            "pass": true,
+            "detail": "latest arrival 2026-08-26 vs latest safe 2026-08-27"
+          },
+          "quote_freshness": {
+            "pass": true,
+            "detail": "quote age 0 min, TTL 30 min"
+          },
+          "liquidity_reserve": {
+            "pass": true,
+            "detail": "lowest headroom above reserve 144,143.05 KZT on 2026-08-24"
+          },
+          "beneficiary_verified": {
+            "pass": true,
+            "detail": "beneficiary status VERIFIED"
+          },
+          "route_allowed": {
+            "pass": true,
+            "detail": "route available and approved"
+          },
+          "kill_switch": {
+            "pass": true,
+            "detail": "off"
+          },
+          "hard_caps": {
+            "pass": true,
+            "detail": "within per-payment and 30-day caps"
+          },
+          "no_duplicate": {
+            "pass": true,
+            "detail": "no prior execution"
+          }
+        },
+        "failed": [],
+        "tranches": [
+          {
+            "index": 0,
+            "execution_date": "2026-08-17",
+            "target": "45,000.00 CNY",
+            "all_in_known": "3,155,856.95 KZT",
+            "arrival_range": [
+              "2026-08-24",
+              "2026-08-26"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 4500000,
+                "ccy": "CNY",
+                "display": "45,000.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 304054055,
+                "ccy": "KZT",
+                "display": "3,040,540.55 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 3692964,
+                "ccy": "KZT",
+                "display": "36,929.64 KZT"
+              },
+              "variable_fee": {
+                "minor": 7693676,
+                "ccy": "KZT",
+                "display": "76,936.76 KZT"
+              },
+              "fixed_fee": {
+                "minor": 100000,
+                "ccy": "KZT",
+                "display": "1,000.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 45000,
+                "ccy": "KZT",
+                "display": "450.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 315585695,
+                "ccy": "KZT",
+                "display": "3,155,856.95 KZT"
+              },
+              "effective_rate": "70.130154",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01462240",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "candidate_id": "C02",
+        "route_id": "R1",
+        "route_name": "Simulated bank wire",
+        "strategy": "weekly_4",
+        "feasible": false,
+        "result": "INFEASIBLE",
+        "total_all_in_known": "3,160,206.96 KZT",
+        "total_minor": 316020696,
+        "deadline_buffer_bd": -14,
+        "operations": 4,
+        "needs_approval": [],
+        "remaining_fx_exposure_after_first": "33,750.00 CNY",
+        "constraints": {
+          "deadline": {
+            "pass": false,
+            "detail": "latest arrival 2026-09-16 vs latest safe 2026-08-27; 3 tranche(s) late"
+          },
+          "quote_freshness": {
+            "pass": true,
+            "detail": "quote age 0 min, TTL 30 min"
+          },
+          "liquidity_reserve": {
+            "pass": true,
+            "detail": "lowest headroom above reserve 139,793.04 KZT on 2026-09-07"
+          },
+          "beneficiary_verified": {
+            "pass": true,
+            "detail": "beneficiary status VERIFIED"
+          },
+          "route_allowed": {
+            "pass": true,
+            "detail": "route available and approved"
+          },
+          "kill_switch": {
+            "pass": true,
+            "detail": "off"
+          },
+          "hard_caps": {
+            "pass": true,
+            "detail": "within per-payment and 30-day caps"
+          },
+          "no_duplicate": {
+            "pass": true,
+            "detail": "no prior execution"
+          }
+        },
+        "failed": [
+          "deadline: latest arrival 2026-09-16 vs latest safe 2026-08-27; 3 tranche(s) late"
+        ],
+        "tranches": [
+          {
+            "index": 0,
+            "execution_date": "2026-08-17",
+            "target": "11,250.00 CNY",
+            "all_in_known": "790,051.74 KZT",
+            "arrival_range": [
+              "2026-08-24",
+              "2026-08-26"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 1125000,
+                "ccy": "CNY",
+                "display": "11,250.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 76013514,
+                "ccy": "KZT",
+                "display": "760,135.14 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 923241,
+                "ccy": "KZT",
+                "display": "9,232.41 KZT"
+              },
+              "variable_fee": {
+                "minor": 1923419,
+                "ccy": "KZT",
+                "display": "19,234.19 KZT"
+              },
+              "fixed_fee": {
+                "minor": 100000,
+                "ccy": "KZT",
+                "display": "1,000.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 45000,
+                "ccy": "KZT",
+                "display": "450.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 79005174,
+                "ccy": "KZT",
+                "display": "790,051.74 KZT"
+              },
+              "effective_rate": "70.226821",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01462240",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          },
+          {
+            "index": 1,
+            "execution_date": "2026-08-24",
+            "target": "11,250.00 CNY",
+            "all_in_known": "790,051.74 KZT",
+            "arrival_range": [
+              "2026-08-31",
+              "2026-09-02"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 1125000,
+                "ccy": "CNY",
+                "display": "11,250.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 76013514,
+                "ccy": "KZT",
+                "display": "760,135.14 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 923241,
+                "ccy": "KZT",
+                "display": "9,232.41 KZT"
+              },
+              "variable_fee": {
+                "minor": 1923419,
+                "ccy": "KZT",
+                "display": "19,234.19 KZT"
+              },
+              "fixed_fee": {
+                "minor": 100000,
+                "ccy": "KZT",
+                "display": "1,000.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 45000,
+                "ccy": "KZT",
+                "display": "450.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 79005174,
+                "ccy": "KZT",
+                "display": "790,051.74 KZT"
+              },
+              "effective_rate": "70.226821",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01462240",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          },
+          {
+            "index": 2,
+            "execution_date": "2026-08-31",
+            "target": "11,250.00 CNY",
+            "all_in_known": "790,051.74 KZT",
+            "arrival_range": [
+              "2026-09-07",
+              "2026-09-09"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 1125000,
+                "ccy": "CNY",
+                "display": "11,250.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 76013514,
+                "ccy": "KZT",
+                "display": "760,135.14 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 923241,
+                "ccy": "KZT",
+                "display": "9,232.41 KZT"
+              },
+              "variable_fee": {
+                "minor": 1923419,
+                "ccy": "KZT",
+                "display": "19,234.19 KZT"
+              },
+              "fixed_fee": {
+                "minor": 100000,
+                "ccy": "KZT",
+                "display": "1,000.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 45000,
+                "ccy": "KZT",
+                "display": "450.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 79005174,
+                "ccy": "KZT",
+                "display": "790,051.74 KZT"
+              },
+              "effective_rate": "70.226821",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01462240",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          },
+          {
+            "index": 3,
+            "execution_date": "2026-09-07",
+            "target": "11,250.00 CNY",
+            "all_in_known": "790,051.74 KZT",
+            "arrival_range": [
+              "2026-09-14",
+              "2026-09-16"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 1125000,
+                "ccy": "CNY",
+                "display": "11,250.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 76013514,
+                "ccy": "KZT",
+                "display": "760,135.14 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 923241,
+                "ccy": "KZT",
+                "display": "9,232.41 KZT"
+              },
+              "variable_fee": {
+                "minor": 1923419,
+                "ccy": "KZT",
+                "display": "19,234.19 KZT"
+              },
+              "fixed_fee": {
+                "minor": 100000,
+                "ccy": "KZT",
+                "display": "1,000.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 45000,
+                "ccy": "KZT",
+                "display": "450.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 79005174,
+                "ccy": "KZT",
+                "display": "790,051.74 KZT"
+              },
+              "effective_rate": "70.226821",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01462240",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "candidate_id": "C03",
+        "route_id": "R1",
+        "route_name": "Simulated bank wire",
+        "strategy": "front_loaded_in_window",
+        "feasible": true,
+        "result": "FEASIBLE",
+        "total_all_in_known": "3,157,306.95 KZT",
+        "total_minor": 315730695,
+        "deadline_buffer_bd": 0,
+        "operations": 2,
+        "needs_approval": [
+          "POL-005 above autonomous cap",
+          "POL-009 FX share above limit"
+        ],
+        "remaining_fx_exposure_after_first": "15,000.00 CNY",
+        "constraints": {
+          "deadline": {
+            "pass": true,
+            "detail": "latest arrival 2026-08-27 vs latest safe 2026-08-27"
+          },
+          "quote_freshness": {
+            "pass": true,
+            "detail": "quote age 0 min, TTL 30 min"
+          },
+          "liquidity_reserve": {
+            "pass": true,
+            "detail": "lowest headroom above reserve 142,693.05 KZT on 2026-08-24"
+          },
+          "beneficiary_verified": {
+            "pass": true,
+            "detail": "beneficiary status VERIFIED"
+          },
+          "route_allowed": {
+            "pass": true,
+            "detail": "route available and approved"
+          },
+          "kill_switch": {
+            "pass": true,
+            "detail": "off"
+          },
+          "hard_caps": {
+            "pass": true,
+            "detail": "within per-payment and 30-day caps"
+          },
+          "no_duplicate": {
+            "pass": true,
+            "detail": "no prior execution"
+          }
+        },
+        "failed": [],
+        "tranches": [
+          {
+            "index": 0,
+            "execution_date": "2026-08-17",
+            "target": "30,000.00 CNY",
+            "all_in_known": "2,104,387.96 KZT",
+            "arrival_range": [
+              "2026-08-24",
+              "2026-08-26"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 3000000,
+                "ccy": "CNY",
+                "display": "30,000.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 202702703,
+                "ccy": "KZT",
+                "display": "2,027,027.03 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 2461976,
+                "ccy": "KZT",
+                "display": "24,619.76 KZT"
+              },
+              "variable_fee": {
+                "minor": 5129117,
+                "ccy": "KZT",
+                "display": "51,291.17 KZT"
+              },
+              "fixed_fee": {
+                "minor": 100000,
+                "ccy": "KZT",
+                "display": "1,000.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 45000,
+                "ccy": "KZT",
+                "display": "450.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 210438796,
+                "ccy": "KZT",
+                "display": "2,104,387.96 KZT"
+              },
+              "effective_rate": "70.146265",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01462240",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          },
+          {
+            "index": 1,
+            "execution_date": "2026-08-18",
+            "target": "15,000.00 CNY",
+            "all_in_known": "1,052,918.99 KZT",
+            "arrival_range": [
+              "2026-08-25",
+              "2026-08-27"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 1500000,
+                "ccy": "CNY",
+                "display": "15,000.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 101351352,
+                "ccy": "KZT",
+                "display": "1,013,513.52 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 1230988,
+                "ccy": "KZT",
+                "display": "12,309.88 KZT"
+              },
+              "variable_fee": {
+                "minor": 2564559,
+                "ccy": "KZT",
+                "display": "25,645.59 KZT"
+              },
+              "fixed_fee": {
+                "minor": 100000,
+                "ccy": "KZT",
+                "display": "1,000.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 45000,
+                "ccy": "KZT",
+                "display": "450.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 105291899,
+                "ccy": "KZT",
+                "display": "1,052,918.99 KZT"
+              },
+              "effective_rate": "70.194599",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01462240",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "candidate_id": "C04",
+        "route_id": "R1",
+        "route_name": "Simulated bank wire",
+        "strategy": "equal_in_window",
+        "feasible": true,
+        "result": "FEASIBLE",
+        "total_all_in_known": "3,157,306.96 KZT",
+        "total_minor": 315730696,
+        "deadline_buffer_bd": 0,
+        "operations": 2,
+        "needs_approval": [
+          "POL-005 above autonomous cap"
+        ],
+        "remaining_fx_exposure_after_first": "22,500.00 CNY",
+        "constraints": {
+          "deadline": {
+            "pass": true,
+            "detail": "latest arrival 2026-08-27 vs latest safe 2026-08-27"
+          },
+          "quote_freshness": {
+            "pass": true,
+            "detail": "quote age 0 min, TTL 30 min"
+          },
+          "liquidity_reserve": {
+            "pass": true,
+            "detail": "lowest headroom above reserve 142,693.04 KZT on 2026-08-24"
+          },
+          "beneficiary_verified": {
+            "pass": true,
+            "detail": "beneficiary status VERIFIED"
+          },
+          "route_allowed": {
+            "pass": true,
+            "detail": "route available and approved"
+          },
+          "kill_switch": {
+            "pass": true,
+            "detail": "off"
+          },
+          "hard_caps": {
+            "pass": true,
+            "detail": "within per-payment and 30-day caps"
+          },
+          "no_duplicate": {
+            "pass": true,
+            "detail": "no prior execution"
+          }
+        },
+        "failed": [],
+        "tranches": [
+          {
+            "index": 0,
+            "execution_date": "2026-08-17",
+            "target": "22,500.00 CNY",
+            "all_in_known": "1,578,653.48 KZT",
+            "arrival_range": [
+              "2026-08-24",
+              "2026-08-26"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 2250000,
+                "ccy": "CNY",
+                "display": "22,500.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 152027028,
+                "ccy": "KZT",
+                "display": "1,520,270.28 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 1846482,
+                "ccy": "KZT",
+                "display": "18,464.82 KZT"
+              },
+              "variable_fee": {
+                "minor": 3846838,
+                "ccy": "KZT",
+                "display": "38,468.38 KZT"
+              },
+              "fixed_fee": {
+                "minor": 100000,
+                "ccy": "KZT",
+                "display": "1,000.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 45000,
+                "ccy": "KZT",
+                "display": "450.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 157865348,
+                "ccy": "KZT",
+                "display": "1,578,653.48 KZT"
+              },
+              "effective_rate": "70.162377",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01462240",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          },
+          {
+            "index": 1,
+            "execution_date": "2026-08-18",
+            "target": "22,500.00 CNY",
+            "all_in_known": "1,578,653.48 KZT",
+            "arrival_range": [
+              "2026-08-25",
+              "2026-08-27"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 2250000,
+                "ccy": "CNY",
+                "display": "22,500.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 152027028,
+                "ccy": "KZT",
+                "display": "1,520,270.28 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 1846482,
+                "ccy": "KZT",
+                "display": "18,464.82 KZT"
+              },
+              "variable_fee": {
+                "minor": 3846838,
+                "ccy": "KZT",
+                "display": "38,468.38 KZT"
+              },
+              "fixed_fee": {
+                "minor": 100000,
+                "ccy": "KZT",
+                "display": "1,000.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 45000,
+                "ccy": "KZT",
+                "display": "450.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 157865348,
+                "ccy": "KZT",
+                "display": "1,578,653.48 KZT"
+              },
+              "effective_rate": "70.162377",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01462240",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "candidate_id": "C05",
+        "route_id": "R2",
+        "route_name": "Simulated fintech transfer",
+        "strategy": "all_at_once",
+        "feasible": true,
+        "result": "FEASIBLE",
+        "total_all_in_known": "3,121,101.79 KZT",
+        "total_minor": 312110179,
+        "deadline_buffer_bd": 4,
+        "operations": 1,
+        "needs_approval": [
+          "POL-005 above autonomous cap",
+          "POL-009 FX share above limit"
+        ],
+        "remaining_fx_exposure_after_first": "0.00 CNY",
+        "constraints": {
+          "deadline": {
+            "pass": true,
+            "detail": "latest arrival 2026-08-21 vs latest safe 2026-08-27"
+          },
+          "quote_freshness": {
+            "pass": true,
+            "detail": "quote age 0 min, TTL 30 min"
+          },
+          "liquidity_reserve": {
+            "pass": true,
+            "detail": "lowest headroom above reserve 178,898.21 KZT on 2026-08-24"
+          },
+          "beneficiary_verified": {
+            "pass": true,
+            "detail": "beneficiary status VERIFIED"
+          },
+          "route_allowed": {
+            "pass": true,
+            "detail": "route available and approved"
+          },
+          "kill_switch": {
+            "pass": true,
+            "detail": "off"
+          },
+          "hard_caps": {
+            "pass": true,
+            "detail": "within per-payment and 30-day caps"
+          },
+          "no_duplicate": {
+            "pass": true,
+            "detail": "no prior execution"
+          }
+        },
+        "failed": [],
+        "tranches": [
+          {
+            "index": 0,
+            "execution_date": "2026-08-17",
+            "target": "45,000.00 CNY",
+            "all_in_known": "3,121,101.79 KZT",
+            "arrival_range": [
+              "2026-08-19",
+              "2026-08-21"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 4500000,
+                "ccy": "CNY",
+                "display": "45,000.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 304054055,
+                "ccy": "KZT",
+                "display": "3,040,540.55 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 1835336,
+                "ccy": "KZT",
+                "display": "18,353.36 KZT"
+              },
+              "variable_fee": {
+                "minor": 6117788,
+                "ccy": "KZT",
+                "display": "61,177.88 KZT"
+              },
+              "fixed_fee": {
+                "minor": 85000,
+                "ccy": "KZT",
+                "display": "850.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 18000,
+                "ccy": "KZT",
+                "display": "180.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 312110179,
+                "ccy": "KZT",
+                "display": "3,121,101.79 KZT"
+              },
+              "effective_rate": "69.357818",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01471120",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "candidate_id": "C06",
+        "route_id": "R2",
+        "route_name": "Simulated fintech transfer",
+        "strategy": "weekly_4",
+        "feasible": false,
+        "result": "INFEASIBLE",
+        "total_all_in_known": "3,124,191.80 KZT",
+        "total_minor": 312419180,
+        "deadline_buffer_bd": -11,
+        "operations": 4,
+        "needs_approval": [],
+        "remaining_fx_exposure_after_first": "33,750.00 CNY",
+        "constraints": {
+          "deadline": {
+            "pass": false,
+            "detail": "latest arrival 2026-09-11 vs latest safe 2026-08-27; 3 tranche(s) late"
+          },
+          "quote_freshness": {
+            "pass": true,
+            "detail": "quote age 0 min, TTL 30 min"
+          },
+          "liquidity_reserve": {
+            "pass": true,
+            "detail": "lowest headroom above reserve 175,808.20 KZT on 2026-09-07"
+          },
+          "beneficiary_verified": {
+            "pass": true,
+            "detail": "beneficiary status VERIFIED"
+          },
+          "route_allowed": {
+            "pass": true,
+            "detail": "route available and approved"
+          },
+          "kill_switch": {
+            "pass": true,
+            "detail": "off"
+          },
+          "hard_caps": {
+            "pass": true,
+            "detail": "within per-payment and 30-day caps"
+          },
+          "no_duplicate": {
+            "pass": true,
+            "detail": "no prior execution"
+          }
+        },
+        "failed": [
+          "deadline: latest arrival 2026-09-11 vs latest safe 2026-08-27; 3 tranche(s) late"
+        ],
+        "tranches": [
+          {
+            "index": 0,
+            "execution_date": "2026-08-17",
+            "target": "11,250.00 CNY",
+            "all_in_known": "781,047.95 KZT",
+            "arrival_range": [
+              "2026-08-19",
+              "2026-08-21"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 1125000,
+                "ccy": "CNY",
+                "display": "11,250.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 76013514,
+                "ccy": "KZT",
+                "display": "760,135.14 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 458834,
+                "ccy": "KZT",
+                "display": "4,588.34 KZT"
+              },
+              "variable_fee": {
+                "minor": 1529447,
+                "ccy": "KZT",
+                "display": "15,294.47 KZT"
+              },
+              "fixed_fee": {
+                "minor": 85000,
+                "ccy": "KZT",
+                "display": "850.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 18000,
+                "ccy": "KZT",
+                "display": "180.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 78104795,
+                "ccy": "KZT",
+                "display": "781,047.95 KZT"
+              },
+              "effective_rate": "69.426484",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01471120",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          },
+          {
+            "index": 1,
+            "execution_date": "2026-08-24",
+            "target": "11,250.00 CNY",
+            "all_in_known": "781,047.95 KZT",
+            "arrival_range": [
+              "2026-08-26",
+              "2026-08-28"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 1125000,
+                "ccy": "CNY",
+                "display": "11,250.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 76013514,
+                "ccy": "KZT",
+                "display": "760,135.14 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 458834,
+                "ccy": "KZT",
+                "display": "4,588.34 KZT"
+              },
+              "variable_fee": {
+                "minor": 1529447,
+                "ccy": "KZT",
+                "display": "15,294.47 KZT"
+              },
+              "fixed_fee": {
+                "minor": 85000,
+                "ccy": "KZT",
+                "display": "850.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 18000,
+                "ccy": "KZT",
+                "display": "180.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 78104795,
+                "ccy": "KZT",
+                "display": "781,047.95 KZT"
+              },
+              "effective_rate": "69.426484",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01471120",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          },
+          {
+            "index": 2,
+            "execution_date": "2026-08-31",
+            "target": "11,250.00 CNY",
+            "all_in_known": "781,047.95 KZT",
+            "arrival_range": [
+              "2026-09-02",
+              "2026-09-04"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 1125000,
+                "ccy": "CNY",
+                "display": "11,250.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 76013514,
+                "ccy": "KZT",
+                "display": "760,135.14 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 458834,
+                "ccy": "KZT",
+                "display": "4,588.34 KZT"
+              },
+              "variable_fee": {
+                "minor": 1529447,
+                "ccy": "KZT",
+                "display": "15,294.47 KZT"
+              },
+              "fixed_fee": {
+                "minor": 85000,
+                "ccy": "KZT",
+                "display": "850.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 18000,
+                "ccy": "KZT",
+                "display": "180.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 78104795,
+                "ccy": "KZT",
+                "display": "781,047.95 KZT"
+              },
+              "effective_rate": "69.426484",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01471120",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          },
+          {
+            "index": 3,
+            "execution_date": "2026-09-07",
+            "target": "11,250.00 CNY",
+            "all_in_known": "781,047.95 KZT",
+            "arrival_range": [
+              "2026-09-09",
+              "2026-09-11"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 1125000,
+                "ccy": "CNY",
+                "display": "11,250.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 76013514,
+                "ccy": "KZT",
+                "display": "760,135.14 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 458834,
+                "ccy": "KZT",
+                "display": "4,588.34 KZT"
+              },
+              "variable_fee": {
+                "minor": 1529447,
+                "ccy": "KZT",
+                "display": "15,294.47 KZT"
+              },
+              "fixed_fee": {
+                "minor": 85000,
+                "ccy": "KZT",
+                "display": "850.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 18000,
+                "ccy": "KZT",
+                "display": "180.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 78104795,
+                "ccy": "KZT",
+                "display": "781,047.95 KZT"
+              },
+              "effective_rate": "69.426484",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01471120",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "candidate_id": "C07",
+        "route_id": "R2",
+        "route_name": "Simulated fintech transfer",
+        "strategy": "front_loaded_in_window",
+        "feasible": true,
+        "result": "FEASIBLE",
+        "total_all_in_known": "3,124,191.82 KZT",
+        "total_minor": 312419182,
+        "deadline_buffer_bd": 0,
+        "operations": 4,
+        "needs_approval": [
+          "POL-005 above autonomous cap"
+        ],
+        "remaining_fx_exposure_after_first": "22,500.00 CNY",
+        "constraints": {
+          "deadline": {
+            "pass": true,
+            "detail": "latest arrival 2026-08-27 vs latest safe 2026-08-27"
+          },
+          "quote_freshness": {
+            "pass": true,
+            "detail": "quote age 0 min, TTL 30 min"
+          },
+          "liquidity_reserve": {
+            "pass": true,
+            "detail": "lowest headroom above reserve 175,808.18 KZT on 2026-08-24"
+          },
+          "beneficiary_verified": {
+            "pass": true,
+            "detail": "beneficiary status VERIFIED"
+          },
+          "route_allowed": {
+            "pass": true,
+            "detail": "route available and approved"
+          },
+          "kill_switch": {
+            "pass": true,
+            "detail": "off"
+          },
+          "hard_caps": {
+            "pass": true,
+            "detail": "within per-payment and 30-day caps"
+          },
+          "no_duplicate": {
+            "pass": true,
+            "detail": "no prior execution"
+          }
+        },
+        "failed": [],
+        "tranches": [
+          {
+            "index": 0,
+            "execution_date": "2026-08-17",
+            "target": "22,500.00 CNY",
+            "all_in_known": "1,561,065.90 KZT",
+            "arrival_range": [
+              "2026-08-19",
+              "2026-08-21"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 2250000,
+                "ccy": "CNY",
+                "display": "22,500.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 152027028,
+                "ccy": "KZT",
+                "display": "1,520,270.28 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 917668,
+                "ccy": "KZT",
+                "display": "9,176.68 KZT"
+              },
+              "variable_fee": {
+                "minor": 3058894,
+                "ccy": "KZT",
+                "display": "30,588.94 KZT"
+              },
+              "fixed_fee": {
+                "minor": 85000,
+                "ccy": "KZT",
+                "display": "850.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 18000,
+                "ccy": "KZT",
+                "display": "180.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 156106590,
+                "ccy": "KZT",
+                "display": "1,561,065.90 KZT"
+              },
+              "effective_rate": "69.380707",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01471120",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          },
+          {
+            "index": 1,
+            "execution_date": "2026-08-18",
+            "target": "11,250.00 CNY",
+            "all_in_known": "781,047.95 KZT",
+            "arrival_range": [
+              "2026-08-20",
+              "2026-08-24"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 1125000,
+                "ccy": "CNY",
+                "display": "11,250.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 76013514,
+                "ccy": "KZT",
+                "display": "760,135.14 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 458834,
+                "ccy": "KZT",
+                "display": "4,588.34 KZT"
+              },
+              "variable_fee": {
+                "minor": 1529447,
+                "ccy": "KZT",
+                "display": "15,294.47 KZT"
+              },
+              "fixed_fee": {
+                "minor": 85000,
+                "ccy": "KZT",
+                "display": "850.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 18000,
+                "ccy": "KZT",
+                "display": "180.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 78104795,
+                "ccy": "KZT",
+                "display": "781,047.95 KZT"
+              },
+              "effective_rate": "69.426484",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01471120",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          },
+          {
+            "index": 2,
+            "execution_date": "2026-08-20",
+            "target": "6,750.00 CNY",
+            "all_in_known": "469,040.78 KZT",
+            "arrival_range": [
+              "2026-08-24",
+              "2026-08-26"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 675000,
+                "ccy": "CNY",
+                "display": "6,750.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 45608109,
+                "ccy": "KZT",
+                "display": "456,081.09 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 275300,
+                "ccy": "KZT",
+                "display": "2,753.00 KZT"
+              },
+              "variable_fee": {
+                "minor": 917669,
+                "ccy": "KZT",
+                "display": "9,176.69 KZT"
+              },
+              "fixed_fee": {
+                "minor": 85000,
+                "ccy": "KZT",
+                "display": "850.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 18000,
+                "ccy": "KZT",
+                "display": "180.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 46904078,
+                "ccy": "KZT",
+                "display": "469,040.78 KZT"
+              },
+              "effective_rate": "69.487523",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01471120",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          },
+          {
+            "index": 3,
+            "execution_date": "2026-08-21",
+            "target": "4,500.00 CNY",
+            "all_in_known": "313,037.19 KZT",
+            "arrival_range": [
+              "2026-08-25",
+              "2026-08-27"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 450000,
+                "ccy": "CNY",
+                "display": "4,500.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 30405406,
+                "ccy": "KZT",
+                "display": "304,054.06 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 183534,
+                "ccy": "KZT",
+                "display": "1,835.34 KZT"
+              },
+              "variable_fee": {
+                "minor": 611779,
+                "ccy": "KZT",
+                "display": "6,117.79 KZT"
+              },
+              "fixed_fee": {
+                "minor": 85000,
+                "ccy": "KZT",
+                "display": "850.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 18000,
+                "ccy": "KZT",
+                "display": "180.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 31303719,
+                "ccy": "KZT",
+                "display": "313,037.19 KZT"
+              },
+              "effective_rate": "69.563820",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01471120",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "candidate_id": "C08",
+        "route_id": "R2",
+        "route_name": "Simulated fintech transfer",
+        "strategy": "equal_in_window",
+        "feasible": true,
+        "result": "FEASIBLE",
+        "total_all_in_known": "3,124,191.80 KZT",
+        "total_minor": 312419180,
+        "deadline_buffer_bd": 0,
+        "operations": 4,
+        "needs_approval": [],
+        "remaining_fx_exposure_after_first": "33,750.00 CNY",
+        "constraints": {
+          "deadline": {
+            "pass": true,
+            "detail": "latest arrival 2026-08-27 vs latest safe 2026-08-27"
+          },
+          "quote_freshness": {
+            "pass": true,
+            "detail": "quote age 0 min, TTL 30 min"
+          },
+          "liquidity_reserve": {
+            "pass": true,
+            "detail": "lowest headroom above reserve 175,808.20 KZT on 2026-08-24"
+          },
+          "beneficiary_verified": {
+            "pass": true,
+            "detail": "beneficiary status VERIFIED"
+          },
+          "route_allowed": {
+            "pass": true,
+            "detail": "route available and approved"
+          },
+          "kill_switch": {
+            "pass": true,
+            "detail": "off"
+          },
+          "hard_caps": {
+            "pass": true,
+            "detail": "within per-payment and 30-day caps"
+          },
+          "no_duplicate": {
+            "pass": true,
+            "detail": "no prior execution"
+          }
+        },
+        "failed": [],
+        "tranches": [
+          {
+            "index": 0,
+            "execution_date": "2026-08-17",
+            "target": "11,250.00 CNY",
+            "all_in_known": "781,047.95 KZT",
+            "arrival_range": [
+              "2026-08-19",
+              "2026-08-21"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 1125000,
+                "ccy": "CNY",
+                "display": "11,250.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 76013514,
+                "ccy": "KZT",
+                "display": "760,135.14 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 458834,
+                "ccy": "KZT",
+                "display": "4,588.34 KZT"
+              },
+              "variable_fee": {
+                "minor": 1529447,
+                "ccy": "KZT",
+                "display": "15,294.47 KZT"
+              },
+              "fixed_fee": {
+                "minor": 85000,
+                "ccy": "KZT",
+                "display": "850.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 18000,
+                "ccy": "KZT",
+                "display": "180.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 78104795,
+                "ccy": "KZT",
+                "display": "781,047.95 KZT"
+              },
+              "effective_rate": "69.426484",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01471120",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          },
+          {
+            "index": 1,
+            "execution_date": "2026-08-18",
+            "target": "11,250.00 CNY",
+            "all_in_known": "781,047.95 KZT",
+            "arrival_range": [
+              "2026-08-20",
+              "2026-08-24"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 1125000,
+                "ccy": "CNY",
+                "display": "11,250.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 76013514,
+                "ccy": "KZT",
+                "display": "760,135.14 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 458834,
+                "ccy": "KZT",
+                "display": "4,588.34 KZT"
+              },
+              "variable_fee": {
+                "minor": 1529447,
+                "ccy": "KZT",
+                "display": "15,294.47 KZT"
+              },
+              "fixed_fee": {
+                "minor": 85000,
+                "ccy": "KZT",
+                "display": "850.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 18000,
+                "ccy": "KZT",
+                "display": "180.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 78104795,
+                "ccy": "KZT",
+                "display": "781,047.95 KZT"
+              },
+              "effective_rate": "69.426484",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01471120",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          },
+          {
+            "index": 2,
+            "execution_date": "2026-08-20",
+            "target": "11,250.00 CNY",
+            "all_in_known": "781,047.95 KZT",
+            "arrival_range": [
+              "2026-08-24",
+              "2026-08-26"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 1125000,
+                "ccy": "CNY",
+                "display": "11,250.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 76013514,
+                "ccy": "KZT",
+                "display": "760,135.14 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 458834,
+                "ccy": "KZT",
+                "display": "4,588.34 KZT"
+              },
+              "variable_fee": {
+                "minor": 1529447,
+                "ccy": "KZT",
+                "display": "15,294.47 KZT"
+              },
+              "fixed_fee": {
+                "minor": 85000,
+                "ccy": "KZT",
+                "display": "850.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 18000,
+                "ccy": "KZT",
+                "display": "180.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 78104795,
+                "ccy": "KZT",
+                "display": "781,047.95 KZT"
+              },
+              "effective_rate": "69.426484",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01471120",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          },
+          {
+            "index": 3,
+            "execution_date": "2026-08-21",
+            "target": "11,250.00 CNY",
+            "all_in_known": "781,047.95 KZT",
+            "arrival_range": [
+              "2026-08-25",
+              "2026-08-27"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 1125000,
+                "ccy": "CNY",
+                "display": "11,250.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 76013514,
+                "ccy": "KZT",
+                "display": "760,135.14 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 458834,
+                "ccy": "KZT",
+                "display": "4,588.34 KZT"
+              },
+              "variable_fee": {
+                "minor": 1529447,
+                "ccy": "KZT",
+                "display": "15,294.47 KZT"
+              },
+              "fixed_fee": {
+                "minor": 85000,
+                "ccy": "KZT",
+                "display": "850.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 18000,
+                "ccy": "KZT",
+                "display": "180.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 78104795,
+                "ccy": "KZT",
+                "display": "781,047.95 KZT"
+              },
+              "effective_rate": "69.426484",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01471120",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "candidate_id": "C09",
+        "route_id": "R3",
+        "route_name": "Simulated multi-currency account",
+        "strategy": "all_at_once",
+        "feasible": true,
+        "result": "FEASIBLE",
+        "total_all_in_known": "3,099,162.83 KZT",
+        "total_minor": 309916283,
+        "deadline_buffer_bd": 5,
+        "operations": 1,
+        "needs_approval": [
+          "POL-005 above autonomous cap",
+          "POL-009 FX share above limit"
+        ],
+        "remaining_fx_exposure_after_first": "0.00 CNY",
+        "constraints": {
+          "deadline": {
+            "pass": true,
+            "detail": "latest arrival 2026-08-20 vs latest safe 2026-08-27"
+          },
+          "quote_freshness": {
+            "pass": true,
+            "detail": "quote age 0 min, TTL 30 min"
+          },
+          "liquidity_reserve": {
+            "pass": true,
+            "detail": "lowest headroom above reserve 200,837.17 KZT on 2026-08-24"
+          },
+          "beneficiary_verified": {
+            "pass": true,
+            "detail": "beneficiary status VERIFIED"
+          },
+          "route_allowed": {
+            "pass": true,
+            "detail": "route available and approved"
+          },
+          "kill_switch": {
+            "pass": true,
+            "detail": "off"
+          },
+          "hard_caps": {
+            "pass": true,
+            "detail": "within per-payment and 30-day caps"
+          },
+          "no_duplicate": {
+            "pass": true,
+            "detail": "no prior execution"
+          }
+        },
+        "failed": [],
+        "tranches": [
+          {
+            "index": 0,
+            "execution_date": "2026-08-17",
+            "target": "45,000.00 CNY",
+            "all_in_known": "3,099,162.83 KZT",
+            "arrival_range": [
+              "2026-08-18",
+              "2026-08-20"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 4500000,
+                "ccy": "CNY",
+                "display": "45,000.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 304054055,
+                "ccy": "KZT",
+                "display": "3,040,540.55 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 1221100,
+                "ccy": "KZT",
+                "display": "12,211.00 KZT"
+              },
+              "variable_fee": {
+                "minor": 4579128,
+                "ccy": "KZT",
+                "display": "45,791.28 KZT"
+              },
+              "fixed_fee": {
+                "minor": 50000,
+                "ccy": "KZT",
+                "display": "500.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 12000,
+                "ccy": "KZT",
+                "display": "120.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 309916283,
+                "ccy": "KZT",
+                "display": "3,099,162.83 KZT"
+              },
+              "effective_rate": "68.870285",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01474080",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "candidate_id": "C10",
+        "route_id": "R3",
+        "route_name": "Simulated multi-currency account",
+        "strategy": "weekly_4",
+        "feasible": false,
+        "result": "INFEASIBLE",
+        "total_all_in_known": "3,101,022.84 KZT",
+        "total_minor": 310102284,
+        "deadline_buffer_bd": -10,
+        "operations": 4,
+        "needs_approval": [],
+        "remaining_fx_exposure_after_first": "33,750.00 CNY",
+        "constraints": {
+          "deadline": {
+            "pass": false,
+            "detail": "latest arrival 2026-09-10 vs latest safe 2026-08-27; 2 tranche(s) late"
+          },
+          "quote_freshness": {
+            "pass": true,
+            "detail": "quote age 0 min, TTL 30 min"
+          },
+          "liquidity_reserve": {
+            "pass": true,
+            "detail": "lowest headroom above reserve 198,977.16 KZT on 2026-09-07"
+          },
+          "beneficiary_verified": {
+            "pass": true,
+            "detail": "beneficiary status VERIFIED"
+          },
+          "route_allowed": {
+            "pass": true,
+            "detail": "route available and approved"
+          },
+          "kill_switch": {
+            "pass": true,
+            "detail": "off"
+          },
+          "hard_caps": {
+            "pass": true,
+            "detail": "within per-payment and 30-day caps"
+          },
+          "no_duplicate": {
+            "pass": true,
+            "detail": "no prior execution"
+          }
+        },
+        "failed": [
+          "deadline: latest arrival 2026-09-10 vs latest safe 2026-08-27; 2 tranche(s) late"
+        ],
+        "tranches": [
+          {
+            "index": 0,
+            "execution_date": "2026-08-17",
+            "target": "11,250.00 CNY",
+            "all_in_known": "775,255.71 KZT",
+            "arrival_range": [
+              "2026-08-18",
+              "2026-08-20"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 1125000,
+                "ccy": "CNY",
+                "display": "11,250.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 76013514,
+                "ccy": "KZT",
+                "display": "760,135.14 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 305275,
+                "ccy": "KZT",
+                "display": "3,052.75 KZT"
+              },
+              "variable_fee": {
+                "minor": 1144782,
+                "ccy": "KZT",
+                "display": "11,447.82 KZT"
+              },
+              "fixed_fee": {
+                "minor": 50000,
+                "ccy": "KZT",
+                "display": "500.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 12000,
+                "ccy": "KZT",
+                "display": "120.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 77525571,
+                "ccy": "KZT",
+                "display": "775,255.71 KZT"
+              },
+              "effective_rate": "68.911619",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01474080",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          },
+          {
+            "index": 1,
+            "execution_date": "2026-08-24",
+            "target": "11,250.00 CNY",
+            "all_in_known": "775,255.71 KZT",
+            "arrival_range": [
+              "2026-08-25",
+              "2026-08-27"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 1125000,
+                "ccy": "CNY",
+                "display": "11,250.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 76013514,
+                "ccy": "KZT",
+                "display": "760,135.14 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 305275,
+                "ccy": "KZT",
+                "display": "3,052.75 KZT"
+              },
+              "variable_fee": {
+                "minor": 1144782,
+                "ccy": "KZT",
+                "display": "11,447.82 KZT"
+              },
+              "fixed_fee": {
+                "minor": 50000,
+                "ccy": "KZT",
+                "display": "500.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 12000,
+                "ccy": "KZT",
+                "display": "120.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 77525571,
+                "ccy": "KZT",
+                "display": "775,255.71 KZT"
+              },
+              "effective_rate": "68.911619",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01474080",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          },
+          {
+            "index": 2,
+            "execution_date": "2026-08-31",
+            "target": "11,250.00 CNY",
+            "all_in_known": "775,255.71 KZT",
+            "arrival_range": [
+              "2026-09-01",
+              "2026-09-03"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 1125000,
+                "ccy": "CNY",
+                "display": "11,250.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 76013514,
+                "ccy": "KZT",
+                "display": "760,135.14 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 305275,
+                "ccy": "KZT",
+                "display": "3,052.75 KZT"
+              },
+              "variable_fee": {
+                "minor": 1144782,
+                "ccy": "KZT",
+                "display": "11,447.82 KZT"
+              },
+              "fixed_fee": {
+                "minor": 50000,
+                "ccy": "KZT",
+                "display": "500.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 12000,
+                "ccy": "KZT",
+                "display": "120.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 77525571,
+                "ccy": "KZT",
+                "display": "775,255.71 KZT"
+              },
+              "effective_rate": "68.911619",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01474080",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          },
+          {
+            "index": 3,
+            "execution_date": "2026-09-07",
+            "target": "11,250.00 CNY",
+            "all_in_known": "775,255.71 KZT",
+            "arrival_range": [
+              "2026-09-08",
+              "2026-09-10"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 1125000,
+                "ccy": "CNY",
+                "display": "11,250.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 76013514,
+                "ccy": "KZT",
+                "display": "760,135.14 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 305275,
+                "ccy": "KZT",
+                "display": "3,052.75 KZT"
+              },
+              "variable_fee": {
+                "minor": 1144782,
+                "ccy": "KZT",
+                "display": "11,447.82 KZT"
+              },
+              "fixed_fee": {
+                "minor": 50000,
+                "ccy": "KZT",
+                "display": "500.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 12000,
+                "ccy": "KZT",
+                "display": "120.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 77525571,
+                "ccy": "KZT",
+                "display": "775,255.71 KZT"
+              },
+              "effective_rate": "68.911619",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01474080",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "candidate_id": "C11",
+        "route_id": "R3",
+        "route_name": "Simulated multi-currency account",
+        "strategy": "front_loaded_in_window",
+        "feasible": true,
+        "result": "FEASIBLE",
+        "total_all_in_known": "3,101,022.86 KZT",
+        "total_minor": 310102286,
+        "deadline_buffer_bd": 0,
+        "operations": 4,
+        "needs_approval": [
+          "POL-005 above autonomous cap"
+        ],
+        "remaining_fx_exposure_after_first": "22,500.00 CNY",
+        "constraints": {
+          "deadline": {
+            "pass": true,
+            "detail": "latest arrival 2026-08-27 vs latest safe 2026-08-27"
+          },
+          "quote_freshness": {
+            "pass": true,
+            "detail": "quote age 0 min, TTL 30 min"
+          },
+          "liquidity_reserve": {
+            "pass": true,
+            "detail": "lowest headroom above reserve 198,977.14 KZT on 2026-08-24"
+          },
+          "beneficiary_verified": {
+            "pass": true,
+            "detail": "beneficiary status VERIFIED"
+          },
+          "route_allowed": {
+            "pass": true,
+            "detail": "route available and approved"
+          },
+          "kill_switch": {
+            "pass": true,
+            "detail": "off"
+          },
+          "hard_caps": {
+            "pass": true,
+            "detail": "within per-payment and 30-day caps"
+          },
+          "no_duplicate": {
+            "pass": true,
+            "detail": "no prior execution"
+          }
+        },
+        "failed": [],
+        "tranches": [
+          {
+            "index": 0,
+            "execution_date": "2026-08-17",
+            "target": "22,500.00 CNY",
+            "all_in_known": "1,549,891.42 KZT",
+            "arrival_range": [
+              "2026-08-18",
+              "2026-08-20"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 2250000,
+                "ccy": "CNY",
+                "display": "22,500.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 152027028,
+                "ccy": "KZT",
+                "display": "1,520,270.28 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 610550,
+                "ccy": "KZT",
+                "display": "6,105.50 KZT"
+              },
+              "variable_fee": {
+                "minor": 2289564,
+                "ccy": "KZT",
+                "display": "22,895.64 KZT"
+              },
+              "fixed_fee": {
+                "minor": 50000,
+                "ccy": "KZT",
+                "display": "500.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 12000,
+                "ccy": "KZT",
+                "display": "120.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 154989142,
+                "ccy": "KZT",
+                "display": "1,549,891.42 KZT"
+              },
+              "effective_rate": "68.884063",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01474080",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          },
+          {
+            "index": 1,
+            "execution_date": "2026-08-19",
+            "target": "11,250.00 CNY",
+            "all_in_known": "775,255.71 KZT",
+            "arrival_range": [
+              "2026-08-20",
+              "2026-08-24"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 1125000,
+                "ccy": "CNY",
+                "display": "11,250.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 76013514,
+                "ccy": "KZT",
+                "display": "760,135.14 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 305275,
+                "ccy": "KZT",
+                "display": "3,052.75 KZT"
+              },
+              "variable_fee": {
+                "minor": 1144782,
+                "ccy": "KZT",
+                "display": "11,447.82 KZT"
+              },
+              "fixed_fee": {
+                "minor": 50000,
+                "ccy": "KZT",
+                "display": "500.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 12000,
+                "ccy": "KZT",
+                "display": "120.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 77525571,
+                "ccy": "KZT",
+                "display": "775,255.71 KZT"
+              },
+              "effective_rate": "68.911619",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01474080",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          },
+          {
+            "index": 2,
+            "execution_date": "2026-08-20",
+            "target": "6,750.00 CNY",
+            "all_in_known": "465,401.44 KZT",
+            "arrival_range": [
+              "2026-08-21",
+              "2026-08-25"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 675000,
+                "ccy": "CNY",
+                "display": "6,750.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 45608109,
+                "ccy": "KZT",
+                "display": "456,081.09 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 183165,
+                "ccy": "KZT",
+                "display": "1,831.65 KZT"
+              },
+              "variable_fee": {
+                "minor": 686870,
+                "ccy": "KZT",
+                "display": "6,868.70 KZT"
+              },
+              "fixed_fee": {
+                "minor": 50000,
+                "ccy": "KZT",
+                "display": "500.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 12000,
+                "ccy": "KZT",
+                "display": "120.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 46540144,
+                "ccy": "KZT",
+                "display": "465,401.44 KZT"
+              },
+              "effective_rate": "68.948361",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01474080",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          },
+          {
+            "index": 3,
+            "execution_date": "2026-08-24",
+            "target": "4,500.00 CNY",
+            "all_in_known": "310,474.29 KZT",
+            "arrival_range": [
+              "2026-08-25",
+              "2026-08-27"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 450000,
+                "ccy": "CNY",
+                "display": "4,500.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 30405406,
+                "ccy": "KZT",
+                "display": "304,054.06 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 122110,
+                "ccy": "KZT",
+                "display": "1,221.10 KZT"
+              },
+              "variable_fee": {
+                "minor": 457913,
+                "ccy": "KZT",
+                "display": "4,579.13 KZT"
+              },
+              "fixed_fee": {
+                "minor": 50000,
+                "ccy": "KZT",
+                "display": "500.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 12000,
+                "ccy": "KZT",
+                "display": "120.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 31047429,
+                "ccy": "KZT",
+                "display": "310,474.29 KZT"
+              },
+              "effective_rate": "68.994287",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01474080",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "candidate_id": "C12",
+        "route_id": "R3",
+        "route_name": "Simulated multi-currency account",
+        "strategy": "equal_in_window",
+        "feasible": true,
+        "result": "FEASIBLE",
+        "total_all_in_known": "3,101,022.84 KZT",
+        "total_minor": 310102284,
+        "deadline_buffer_bd": 0,
+        "operations": 4,
+        "needs_approval": [],
+        "remaining_fx_exposure_after_first": "33,750.00 CNY",
+        "constraints": {
+          "deadline": {
+            "pass": true,
+            "detail": "latest arrival 2026-08-27 vs latest safe 2026-08-27"
+          },
+          "quote_freshness": {
+            "pass": true,
+            "detail": "quote age 0 min, TTL 30 min"
+          },
+          "liquidity_reserve": {
+            "pass": true,
+            "detail": "lowest headroom above reserve 198,977.16 KZT on 2026-08-24"
+          },
+          "beneficiary_verified": {
+            "pass": true,
+            "detail": "beneficiary status VERIFIED"
+          },
+          "route_allowed": {
+            "pass": true,
+            "detail": "route available and approved"
+          },
+          "kill_switch": {
+            "pass": true,
+            "detail": "off"
+          },
+          "hard_caps": {
+            "pass": true,
+            "detail": "within per-payment and 30-day caps"
+          },
+          "no_duplicate": {
+            "pass": true,
+            "detail": "no prior execution"
+          }
+        },
+        "failed": [],
+        "tranches": [
+          {
+            "index": 0,
+            "execution_date": "2026-08-17",
+            "target": "11,250.00 CNY",
+            "all_in_known": "775,255.71 KZT",
+            "arrival_range": [
+              "2026-08-18",
+              "2026-08-20"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 1125000,
+                "ccy": "CNY",
+                "display": "11,250.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 76013514,
+                "ccy": "KZT",
+                "display": "760,135.14 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 305275,
+                "ccy": "KZT",
+                "display": "3,052.75 KZT"
+              },
+              "variable_fee": {
+                "minor": 1144782,
+                "ccy": "KZT",
+                "display": "11,447.82 KZT"
+              },
+              "fixed_fee": {
+                "minor": 50000,
+                "ccy": "KZT",
+                "display": "500.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 12000,
+                "ccy": "KZT",
+                "display": "120.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 77525571,
+                "ccy": "KZT",
+                "display": "775,255.71 KZT"
+              },
+              "effective_rate": "68.911619",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01474080",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          },
+          {
+            "index": 1,
+            "execution_date": "2026-08-19",
+            "target": "11,250.00 CNY",
+            "all_in_known": "775,255.71 KZT",
+            "arrival_range": [
+              "2026-08-20",
+              "2026-08-24"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 1125000,
+                "ccy": "CNY",
+                "display": "11,250.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 76013514,
+                "ccy": "KZT",
+                "display": "760,135.14 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 305275,
+                "ccy": "KZT",
+                "display": "3,052.75 KZT"
+              },
+              "variable_fee": {
+                "minor": 1144782,
+                "ccy": "KZT",
+                "display": "11,447.82 KZT"
+              },
+              "fixed_fee": {
+                "minor": 50000,
+                "ccy": "KZT",
+                "display": "500.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 12000,
+                "ccy": "KZT",
+                "display": "120.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 77525571,
+                "ccy": "KZT",
+                "display": "775,255.71 KZT"
+              },
+              "effective_rate": "68.911619",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01474080",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          },
+          {
+            "index": 2,
+            "execution_date": "2026-08-20",
+            "target": "11,250.00 CNY",
+            "all_in_known": "775,255.71 KZT",
+            "arrival_range": [
+              "2026-08-21",
+              "2026-08-25"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 1125000,
+                "ccy": "CNY",
+                "display": "11,250.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 76013514,
+                "ccy": "KZT",
+                "display": "760,135.14 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 305275,
+                "ccy": "KZT",
+                "display": "3,052.75 KZT"
+              },
+              "variable_fee": {
+                "minor": 1144782,
+                "ccy": "KZT",
+                "display": "11,447.82 KZT"
+              },
+              "fixed_fee": {
+                "minor": 50000,
+                "ccy": "KZT",
+                "display": "500.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 12000,
+                "ccy": "KZT",
+                "display": "120.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 77525571,
+                "ccy": "KZT",
+                "display": "775,255.71 KZT"
+              },
+              "effective_rate": "68.911619",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01474080",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          },
+          {
+            "index": 3,
+            "execution_date": "2026-08-24",
+            "target": "11,250.00 CNY",
+            "all_in_known": "775,255.71 KZT",
+            "arrival_range": [
+              "2026-08-25",
+              "2026-08-27"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 1125000,
+                "ccy": "CNY",
+                "display": "11,250.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 76013514,
+                "ccy": "KZT",
+                "display": "760,135.14 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 305275,
+                "ccy": "KZT",
+                "display": "3,052.75 KZT"
+              },
+              "variable_fee": {
+                "minor": 1144782,
+                "ccy": "KZT",
+                "display": "11,447.82 KZT"
+              },
+              "fixed_fee": {
+                "minor": 50000,
+                "ccy": "KZT",
+                "display": "500.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 12000,
+                "ccy": "KZT",
+                "display": "120.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 77525571,
+                "ccy": "KZT",
+                "display": "775,255.71 KZT"
+              },
+              "effective_rate": "68.911619",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01474080",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "candidate_id": "C13",
+        "route_id": "R4",
+        "route_name": "Cheap but slow route",
+        "strategy": "all_at_once",
+        "feasible": false,
+        "result": "INFEASIBLE",
+        "total_all_in_known": "3,080,536.51 KZT",
+        "total_minor": 308053651,
+        "deadline_buffer_bd": -2,
+        "operations": 1,
+        "needs_approval": [
+          "POL-005 above autonomous cap",
+          "POL-009 FX share above limit"
+        ],
+        "remaining_fx_exposure_after_first": "0.00 CNY",
+        "constraints": {
+          "deadline": {
+            "pass": false,
+            "detail": "latest arrival 2026-08-31 vs latest safe 2026-08-27; 1 tranche(s) late"
+          },
+          "quote_freshness": {
+            "pass": true,
+            "detail": "quote age 0 min, TTL 30 min"
+          },
+          "liquidity_reserve": {
+            "pass": true,
+            "detail": "lowest headroom above reserve 219,463.49 KZT on 2026-08-24"
+          },
+          "beneficiary_verified": {
+            "pass": true,
+            "detail": "beneficiary status VERIFIED"
+          },
+          "route_allowed": {
+            "pass": true,
+            "detail": "route available and approved"
+          },
+          "kill_switch": {
+            "pass": true,
+            "detail": "off"
+          },
+          "hard_caps": {
+            "pass": true,
+            "detail": "within per-payment and 30-day caps"
+          },
+          "no_duplicate": {
+            "pass": true,
+            "detail": "no prior execution"
+          }
+        },
+        "failed": [
+          "deadline: latest arrival 2026-08-31 vs latest safe 2026-08-27; 1 tranche(s) late"
+        ],
+        "tranches": [
+          {
+            "index": 0,
+            "execution_date": "2026-08-17",
+            "target": "45,000.00 CNY",
+            "all_in_known": "3,080,536.51 KZT",
+            "arrival_range": [
+              "2026-08-26",
+              "2026-08-31"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 4500000,
+                "ccy": "CNY",
+                "display": "45,000.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 304054055,
+                "ccy": "KZT",
+                "display": "3,040,540.55 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 914906,
+                "ccy": "KZT",
+                "display": "9,149.06 KZT"
+              },
+              "variable_fee": {
+                "minor": 3049690,
+                "ccy": "KZT",
+                "display": "30,496.90 KZT"
+              },
+              "fixed_fee": {
+                "minor": 25000,
+                "ccy": "KZT",
+                "display": "250.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 10000,
+                "ccy": "KZT",
+                "display": "100.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 308053651,
+                "ccy": "KZT",
+                "display": "3,080,536.51 KZT"
+              },
+              "effective_rate": "68.456367",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01475560",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "candidate_id": "C14",
+        "route_id": "R4",
+        "route_name": "Cheap but slow route",
+        "strategy": "weekly_4",
+        "feasible": false,
+        "result": "INFEASIBLE",
+        "total_all_in_known": "3,081,586.56 KZT",
+        "total_minor": 308158656,
+        "deadline_buffer_bd": -17,
+        "operations": 4,
+        "needs_approval": [],
+        "remaining_fx_exposure_after_first": "33,750.00 CNY",
+        "constraints": {
+          "deadline": {
+            "pass": false,
+            "detail": "latest arrival 2026-09-21 vs latest safe 2026-08-27; 4 tranche(s) late"
+          },
+          "quote_freshness": {
+            "pass": true,
+            "detail": "quote age 0 min, TTL 30 min"
+          },
+          "liquidity_reserve": {
+            "pass": true,
+            "detail": "lowest headroom above reserve 218,413.44 KZT on 2026-09-07"
+          },
+          "beneficiary_verified": {
+            "pass": true,
+            "detail": "beneficiary status VERIFIED"
+          },
+          "route_allowed": {
+            "pass": true,
+            "detail": "route available and approved"
+          },
+          "kill_switch": {
+            "pass": true,
+            "detail": "off"
+          },
+          "hard_caps": {
+            "pass": true,
+            "detail": "within per-payment and 30-day caps"
+          },
+          "no_duplicate": {
+            "pass": true,
+            "detail": "no prior execution"
+          }
+        },
+        "failed": [
+          "deadline: latest arrival 2026-09-21 vs latest safe 2026-08-27; 4 tranche(s) late"
+        ],
+        "tranches": [
+          {
+            "index": 0,
+            "execution_date": "2026-08-17",
+            "target": "11,250.00 CNY",
+            "all_in_known": "770,396.64 KZT",
+            "arrival_range": [
+              "2026-08-26",
+              "2026-08-31"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 1125000,
+                "ccy": "CNY",
+                "display": "11,250.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 76013514,
+                "ccy": "KZT",
+                "display": "760,135.14 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 228727,
+                "ccy": "KZT",
+                "display": "2,287.27 KZT"
+              },
+              "variable_fee": {
+                "minor": 762423,
+                "ccy": "KZT",
+                "display": "7,624.23 KZT"
+              },
+              "fixed_fee": {
+                "minor": 25000,
+                "ccy": "KZT",
+                "display": "250.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 10000,
+                "ccy": "KZT",
+                "display": "100.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 77039664,
+                "ccy": "KZT",
+                "display": "770,396.64 KZT"
+              },
+              "effective_rate": "68.479701",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01475560",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          },
+          {
+            "index": 1,
+            "execution_date": "2026-08-24",
+            "target": "11,250.00 CNY",
+            "all_in_known": "770,396.64 KZT",
+            "arrival_range": [
+              "2026-09-02",
+              "2026-09-07"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 1125000,
+                "ccy": "CNY",
+                "display": "11,250.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 76013514,
+                "ccy": "KZT",
+                "display": "760,135.14 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 228727,
+                "ccy": "KZT",
+                "display": "2,287.27 KZT"
+              },
+              "variable_fee": {
+                "minor": 762423,
+                "ccy": "KZT",
+                "display": "7,624.23 KZT"
+              },
+              "fixed_fee": {
+                "minor": 25000,
+                "ccy": "KZT",
+                "display": "250.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 10000,
+                "ccy": "KZT",
+                "display": "100.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 77039664,
+                "ccy": "KZT",
+                "display": "770,396.64 KZT"
+              },
+              "effective_rate": "68.479701",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01475560",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          },
+          {
+            "index": 2,
+            "execution_date": "2026-08-31",
+            "target": "11,250.00 CNY",
+            "all_in_known": "770,396.64 KZT",
+            "arrival_range": [
+              "2026-09-09",
+              "2026-09-14"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 1125000,
+                "ccy": "CNY",
+                "display": "11,250.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 76013514,
+                "ccy": "KZT",
+                "display": "760,135.14 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 228727,
+                "ccy": "KZT",
+                "display": "2,287.27 KZT"
+              },
+              "variable_fee": {
+                "minor": 762423,
+                "ccy": "KZT",
+                "display": "7,624.23 KZT"
+              },
+              "fixed_fee": {
+                "minor": 25000,
+                "ccy": "KZT",
+                "display": "250.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 10000,
+                "ccy": "KZT",
+                "display": "100.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 77039664,
+                "ccy": "KZT",
+                "display": "770,396.64 KZT"
+              },
+              "effective_rate": "68.479701",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01475560",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          },
+          {
+            "index": 3,
+            "execution_date": "2026-09-07",
+            "target": "11,250.00 CNY",
+            "all_in_known": "770,396.64 KZT",
+            "arrival_range": [
+              "2026-09-16",
+              "2026-09-21"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 1125000,
+                "ccy": "CNY",
+                "display": "11,250.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 76013514,
+                "ccy": "KZT",
+                "display": "760,135.14 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 228727,
+                "ccy": "KZT",
+                "display": "2,287.27 KZT"
+              },
+              "variable_fee": {
+                "minor": 762423,
+                "ccy": "KZT",
+                "display": "7,624.23 KZT"
+              },
+              "fixed_fee": {
+                "minor": 25000,
+                "ccy": "KZT",
+                "display": "250.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 10000,
+                "ccy": "KZT",
+                "display": "100.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 77039664,
+                "ccy": "KZT",
+                "display": "770,396.64 KZT"
+              },
+              "effective_rate": "68.479701",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01475560",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "candidate_id": "C15",
+        "route_id": "R4",
+        "route_name": "Cheap but slow route",
+        "strategy": "front_loaded_in_window",
+        "feasible": false,
+        "result": "INFEASIBLE",
+        "total_all_in_known": "3,080,536.51 KZT",
+        "total_minor": 308053651,
+        "deadline_buffer_bd": -2,
+        "operations": 1,
+        "needs_approval": [
+          "POL-005 above autonomous cap",
+          "POL-009 FX share above limit"
+        ],
+        "remaining_fx_exposure_after_first": "0.00 CNY",
+        "constraints": {
+          "deadline": {
+            "pass": false,
+            "detail": "latest arrival 2026-08-31 vs latest safe 2026-08-27; 1 tranche(s) late"
+          },
+          "quote_freshness": {
+            "pass": true,
+            "detail": "quote age 0 min, TTL 30 min"
+          },
+          "liquidity_reserve": {
+            "pass": true,
+            "detail": "lowest headroom above reserve 219,463.49 KZT on 2026-08-24"
+          },
+          "beneficiary_verified": {
+            "pass": true,
+            "detail": "beneficiary status VERIFIED"
+          },
+          "route_allowed": {
+            "pass": true,
+            "detail": "route available and approved"
+          },
+          "kill_switch": {
+            "pass": true,
+            "detail": "off"
+          },
+          "hard_caps": {
+            "pass": true,
+            "detail": "within per-payment and 30-day caps"
+          },
+          "no_duplicate": {
+            "pass": true,
+            "detail": "no prior execution"
+          }
+        },
+        "failed": [
+          "deadline: latest arrival 2026-08-31 vs latest safe 2026-08-27; 1 tranche(s) late"
+        ],
+        "tranches": [
+          {
+            "index": 0,
+            "execution_date": "2026-08-17",
+            "target": "45,000.00 CNY",
+            "all_in_known": "3,080,536.51 KZT",
+            "arrival_range": [
+              "2026-08-26",
+              "2026-08-31"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 4500000,
+                "ccy": "CNY",
+                "display": "45,000.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 304054055,
+                "ccy": "KZT",
+                "display": "3,040,540.55 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 914906,
+                "ccy": "KZT",
+                "display": "9,149.06 KZT"
+              },
+              "variable_fee": {
+                "minor": 3049690,
+                "ccy": "KZT",
+                "display": "30,496.90 KZT"
+              },
+              "fixed_fee": {
+                "minor": 25000,
+                "ccy": "KZT",
+                "display": "250.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 10000,
+                "ccy": "KZT",
+                "display": "100.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 308053651,
+                "ccy": "KZT",
+                "display": "3,080,536.51 KZT"
+              },
+              "effective_rate": "68.456367",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01475560",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "candidate_id": "C16",
+        "route_id": "R4",
+        "route_name": "Cheap but slow route",
+        "strategy": "equal_in_window",
+        "feasible": false,
+        "result": "INFEASIBLE",
+        "total_all_in_known": "3,080,536.51 KZT",
+        "total_minor": 308053651,
+        "deadline_buffer_bd": -2,
+        "operations": 1,
+        "needs_approval": [
+          "POL-005 above autonomous cap",
+          "POL-009 FX share above limit"
+        ],
+        "remaining_fx_exposure_after_first": "0.00 CNY",
+        "constraints": {
+          "deadline": {
+            "pass": false,
+            "detail": "latest arrival 2026-08-31 vs latest safe 2026-08-27; 1 tranche(s) late"
+          },
+          "quote_freshness": {
+            "pass": true,
+            "detail": "quote age 0 min, TTL 30 min"
+          },
+          "liquidity_reserve": {
+            "pass": true,
+            "detail": "lowest headroom above reserve 219,463.49 KZT on 2026-08-24"
+          },
+          "beneficiary_verified": {
+            "pass": true,
+            "detail": "beneficiary status VERIFIED"
+          },
+          "route_allowed": {
+            "pass": true,
+            "detail": "route available and approved"
+          },
+          "kill_switch": {
+            "pass": true,
+            "detail": "off"
+          },
+          "hard_caps": {
+            "pass": true,
+            "detail": "within per-payment and 30-day caps"
+          },
+          "no_duplicate": {
+            "pass": true,
+            "detail": "no prior execution"
+          }
+        },
+        "failed": [
+          "deadline: latest arrival 2026-08-31 vs latest safe 2026-08-27; 1 tranche(s) late"
+        ],
+        "tranches": [
+          {
+            "index": 0,
+            "execution_date": "2026-08-17",
+            "target": "45,000.00 CNY",
+            "all_in_known": "3,080,536.51 KZT",
+            "arrival_range": [
+              "2026-08-26",
+              "2026-08-31"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 4500000,
+                "ccy": "CNY",
+                "display": "45,000.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 304054055,
+                "ccy": "KZT",
+                "display": "3,040,540.55 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 914906,
+                "ccy": "KZT",
+                "display": "9,149.06 KZT"
+              },
+              "variable_fee": {
+                "minor": 3049690,
+                "ccy": "KZT",
+                "display": "30,496.90 KZT"
+              },
+              "fixed_fee": {
+                "minor": 25000,
+                "ccy": "KZT",
+                "display": "250.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 10000,
+                "ccy": "KZT",
+                "display": "100.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 308053651,
+                "ccy": "KZT",
+                "display": "3,080,536.51 KZT"
+              },
+              "effective_rate": "68.456367",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01475560",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "candidate_id": "C17",
+        "route_id": "R5",
+        "route_name": "Stale quote route",
+        "strategy": "all_at_once",
+        "feasible": false,
+        "result": "INFEASIBLE",
+        "total_all_in_known": "3,102,086.94 KZT",
+        "total_minor": 310208694,
+        "deadline_buffer_bd": 4,
+        "operations": 1,
+        "needs_approval": [
+          "POL-005 above autonomous cap",
+          "POL-009 FX share above limit"
+        ],
+        "remaining_fx_exposure_after_first": "0.00 CNY",
+        "constraints": {
+          "deadline": {
+            "pass": true,
+            "detail": "latest arrival 2026-08-21 vs latest safe 2026-08-27"
+          },
+          "quote_freshness": {
+            "pass": false,
+            "detail": "quote age 1440 min, TTL 30 min"
+          },
+          "liquidity_reserve": {
+            "pass": true,
+            "detail": "lowest headroom above reserve 197,913.06 KZT on 2026-08-24"
+          },
+          "beneficiary_verified": {
+            "pass": true,
+            "detail": "beneficiary status VERIFIED"
+          },
+          "route_allowed": {
+            "pass": true,
+            "detail": "route available and approved"
+          },
+          "kill_switch": {
+            "pass": true,
+            "detail": "off"
+          },
+          "hard_caps": {
+            "pass": true,
+            "detail": "within per-payment and 30-day caps"
+          },
+          "no_duplicate": {
+            "pass": true,
+            "detail": "no prior execution"
+          }
+        },
+        "failed": [
+          "quote_freshness: quote age 1440 min, TTL 30 min"
+        ],
+        "tranches": [
+          {
+            "index": 0,
+            "execution_date": "2026-08-17",
+            "target": "45,000.00 CNY",
+            "all_in_known": "3,102,086.94 KZT",
+            "arrival_range": [
+              "2026-08-19",
+              "2026-08-21"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 4500000,
+                "ccy": "CNY",
+                "display": "45,000.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 304054055,
+                "ccy": "KZT",
+                "display": "3,040,540.55 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 1527909,
+                "ccy": "KZT",
+                "display": "15,279.09 KZT"
+              },
+              "variable_fee": {
+                "minor": 4583730,
+                "ccy": "KZT",
+                "display": "45,837.30 KZT"
+              },
+              "fixed_fee": {
+                "minor": 30000,
+                "ccy": "KZT",
+                "display": "300.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 13000,
+                "ccy": "KZT",
+                "display": "130.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 310208694,
+                "ccy": "KZT",
+                "display": "3,102,086.94 KZT"
+              },
+              "effective_rate": "68.935265",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01472600",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "candidate_id": "C18",
+        "route_id": "R5",
+        "route_name": "Stale quote route",
+        "strategy": "weekly_4",
+        "feasible": false,
+        "result": "INFEASIBLE",
+        "total_all_in_known": "3,103,376.96 KZT",
+        "total_minor": 310337696,
+        "deadline_buffer_bd": -11,
+        "operations": 4,
+        "needs_approval": [],
+        "remaining_fx_exposure_after_first": "33,750.00 CNY",
+        "constraints": {
+          "deadline": {
+            "pass": false,
+            "detail": "latest arrival 2026-09-11 vs latest safe 2026-08-27; 3 tranche(s) late"
+          },
+          "quote_freshness": {
+            "pass": false,
+            "detail": "quote age 1440 min, TTL 30 min"
+          },
+          "liquidity_reserve": {
+            "pass": true,
+            "detail": "lowest headroom above reserve 196,623.04 KZT on 2026-09-07"
+          },
+          "beneficiary_verified": {
+            "pass": true,
+            "detail": "beneficiary status VERIFIED"
+          },
+          "route_allowed": {
+            "pass": true,
+            "detail": "route available and approved"
+          },
+          "kill_switch": {
+            "pass": true,
+            "detail": "off"
+          },
+          "hard_caps": {
+            "pass": true,
+            "detail": "within per-payment and 30-day caps"
+          },
+          "no_duplicate": {
+            "pass": true,
+            "detail": "no prior execution"
+          }
+        },
+        "failed": [
+          "deadline: latest arrival 2026-09-11 vs latest safe 2026-08-27; 3 tranche(s) late",
+          "quote_freshness: quote age 1440 min, TTL 30 min"
+        ],
+        "tranches": [
+          {
+            "index": 0,
+            "execution_date": "2026-08-17",
+            "target": "11,250.00 CNY",
+            "all_in_known": "775,844.24 KZT",
+            "arrival_range": [
+              "2026-08-19",
+              "2026-08-21"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 1125000,
+                "ccy": "CNY",
+                "display": "11,250.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 76013514,
+                "ccy": "KZT",
+                "display": "760,135.14 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 381977,
+                "ccy": "KZT",
+                "display": "3,819.77 KZT"
+              },
+              "variable_fee": {
+                "minor": 1145933,
+                "ccy": "KZT",
+                "display": "11,459.33 KZT"
+              },
+              "fixed_fee": {
+                "minor": 30000,
+                "ccy": "KZT",
+                "display": "300.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 13000,
+                "ccy": "KZT",
+                "display": "130.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 77584424,
+                "ccy": "KZT",
+                "display": "775,844.24 KZT"
+              },
+              "effective_rate": "68.963932",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01472600",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          },
+          {
+            "index": 1,
+            "execution_date": "2026-08-24",
+            "target": "11,250.00 CNY",
+            "all_in_known": "775,844.24 KZT",
+            "arrival_range": [
+              "2026-08-26",
+              "2026-08-28"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 1125000,
+                "ccy": "CNY",
+                "display": "11,250.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 76013514,
+                "ccy": "KZT",
+                "display": "760,135.14 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 381977,
+                "ccy": "KZT",
+                "display": "3,819.77 KZT"
+              },
+              "variable_fee": {
+                "minor": 1145933,
+                "ccy": "KZT",
+                "display": "11,459.33 KZT"
+              },
+              "fixed_fee": {
+                "minor": 30000,
+                "ccy": "KZT",
+                "display": "300.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 13000,
+                "ccy": "KZT",
+                "display": "130.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 77584424,
+                "ccy": "KZT",
+                "display": "775,844.24 KZT"
+              },
+              "effective_rate": "68.963932",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01472600",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          },
+          {
+            "index": 2,
+            "execution_date": "2026-08-31",
+            "target": "11,250.00 CNY",
+            "all_in_known": "775,844.24 KZT",
+            "arrival_range": [
+              "2026-09-02",
+              "2026-09-04"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 1125000,
+                "ccy": "CNY",
+                "display": "11,250.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 76013514,
+                "ccy": "KZT",
+                "display": "760,135.14 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 381977,
+                "ccy": "KZT",
+                "display": "3,819.77 KZT"
+              },
+              "variable_fee": {
+                "minor": 1145933,
+                "ccy": "KZT",
+                "display": "11,459.33 KZT"
+              },
+              "fixed_fee": {
+                "minor": 30000,
+                "ccy": "KZT",
+                "display": "300.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 13000,
+                "ccy": "KZT",
+                "display": "130.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 77584424,
+                "ccy": "KZT",
+                "display": "775,844.24 KZT"
+              },
+              "effective_rate": "68.963932",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01472600",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          },
+          {
+            "index": 3,
+            "execution_date": "2026-09-07",
+            "target": "11,250.00 CNY",
+            "all_in_known": "775,844.24 KZT",
+            "arrival_range": [
+              "2026-09-09",
+              "2026-09-11"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 1125000,
+                "ccy": "CNY",
+                "display": "11,250.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 76013514,
+                "ccy": "KZT",
+                "display": "760,135.14 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 381977,
+                "ccy": "KZT",
+                "display": "3,819.77 KZT"
+              },
+              "variable_fee": {
+                "minor": 1145933,
+                "ccy": "KZT",
+                "display": "11,459.33 KZT"
+              },
+              "fixed_fee": {
+                "minor": 30000,
+                "ccy": "KZT",
+                "display": "300.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 13000,
+                "ccy": "KZT",
+                "display": "130.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 77584424,
+                "ccy": "KZT",
+                "display": "775,844.24 KZT"
+              },
+              "effective_rate": "68.963932",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01472600",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "candidate_id": "C19",
+        "route_id": "R5",
+        "route_name": "Stale quote route",
+        "strategy": "front_loaded_in_window",
+        "feasible": false,
+        "result": "INFEASIBLE",
+        "total_all_in_known": "3,103,376.96 KZT",
+        "total_minor": 310337696,
+        "deadline_buffer_bd": 0,
+        "operations": 4,
+        "needs_approval": [
+          "POL-005 above autonomous cap"
+        ],
+        "remaining_fx_exposure_after_first": "22,500.00 CNY",
+        "constraints": {
+          "deadline": {
+            "pass": true,
+            "detail": "latest arrival 2026-08-27 vs latest safe 2026-08-27"
+          },
+          "quote_freshness": {
+            "pass": false,
+            "detail": "quote age 1440 min, TTL 30 min"
+          },
+          "liquidity_reserve": {
+            "pass": true,
+            "detail": "lowest headroom above reserve 196,623.04 KZT on 2026-08-24"
+          },
+          "beneficiary_verified": {
+            "pass": true,
+            "detail": "beneficiary status VERIFIED"
+          },
+          "route_allowed": {
+            "pass": true,
+            "detail": "route available and approved"
+          },
+          "kill_switch": {
+            "pass": true,
+            "detail": "off"
+          },
+          "hard_caps": {
+            "pass": true,
+            "detail": "within per-payment and 30-day caps"
+          },
+          "no_duplicate": {
+            "pass": true,
+            "detail": "no prior execution"
+          }
+        },
+        "failed": [
+          "quote_freshness: quote age 1440 min, TTL 30 min"
+        ],
+        "tranches": [
+          {
+            "index": 0,
+            "execution_date": "2026-08-17",
+            "target": "22,500.00 CNY",
+            "all_in_known": "1,551,258.47 KZT",
+            "arrival_range": [
+              "2026-08-19",
+              "2026-08-21"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 2250000,
+                "ccy": "CNY",
+                "display": "22,500.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 152027028,
+                "ccy": "KZT",
+                "display": "1,520,270.28 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 763954,
+                "ccy": "KZT",
+                "display": "7,639.54 KZT"
+              },
+              "variable_fee": {
+                "minor": 2291865,
+                "ccy": "KZT",
+                "display": "22,918.65 KZT"
+              },
+              "fixed_fee": {
+                "minor": 30000,
+                "ccy": "KZT",
+                "display": "300.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 13000,
+                "ccy": "KZT",
+                "display": "130.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 155125847,
+                "ccy": "KZT",
+                "display": "1,551,258.47 KZT"
+              },
+              "effective_rate": "68.944821",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01472600",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          },
+          {
+            "index": 1,
+            "execution_date": "2026-08-18",
+            "target": "11,250.00 CNY",
+            "all_in_known": "775,844.24 KZT",
+            "arrival_range": [
+              "2026-08-20",
+              "2026-08-24"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 1125000,
+                "ccy": "CNY",
+                "display": "11,250.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 76013514,
+                "ccy": "KZT",
+                "display": "760,135.14 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 381977,
+                "ccy": "KZT",
+                "display": "3,819.77 KZT"
+              },
+              "variable_fee": {
+                "minor": 1145933,
+                "ccy": "KZT",
+                "display": "11,459.33 KZT"
+              },
+              "fixed_fee": {
+                "minor": 30000,
+                "ccy": "KZT",
+                "display": "300.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 13000,
+                "ccy": "KZT",
+                "display": "130.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 77584424,
+                "ccy": "KZT",
+                "display": "775,844.24 KZT"
+              },
+              "effective_rate": "68.963932",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01472600",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          },
+          {
+            "index": 2,
+            "execution_date": "2026-08-20",
+            "target": "6,750.00 CNY",
+            "all_in_known": "465,678.55 KZT",
+            "arrival_range": [
+              "2026-08-24",
+              "2026-08-26"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 675000,
+                "ccy": "CNY",
+                "display": "6,750.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 45608109,
+                "ccy": "KZT",
+                "display": "456,081.09 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 229186,
+                "ccy": "KZT",
+                "display": "2,291.86 KZT"
+              },
+              "variable_fee": {
+                "minor": 687560,
+                "ccy": "KZT",
+                "display": "6,875.60 KZT"
+              },
+              "fixed_fee": {
+                "minor": 30000,
+                "ccy": "KZT",
+                "display": "300.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 13000,
+                "ccy": "KZT",
+                "display": "130.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 46567855,
+                "ccy": "KZT",
+                "display": "465,678.55 KZT"
+              },
+              "effective_rate": "68.989415",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01472600",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          },
+          {
+            "index": 3,
+            "execution_date": "2026-08-21",
+            "target": "4,500.00 CNY",
+            "all_in_known": "310,595.70 KZT",
+            "arrival_range": [
+              "2026-08-25",
+              "2026-08-27"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 450000,
+                "ccy": "CNY",
+                "display": "4,500.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 30405406,
+                "ccy": "KZT",
+                "display": "304,054.06 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 152791,
+                "ccy": "KZT",
+                "display": "1,527.91 KZT"
+              },
+              "variable_fee": {
+                "minor": 458373,
+                "ccy": "KZT",
+                "display": "4,583.73 KZT"
+              },
+              "fixed_fee": {
+                "minor": 30000,
+                "ccy": "KZT",
+                "display": "300.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 13000,
+                "ccy": "KZT",
+                "display": "130.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 31059570,
+                "ccy": "KZT",
+                "display": "310,595.70 KZT"
+              },
+              "effective_rate": "69.021267",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01472600",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "candidate_id": "C20",
+        "route_id": "R5",
+        "route_name": "Stale quote route",
+        "strategy": "equal_in_window",
+        "feasible": false,
+        "result": "INFEASIBLE",
+        "total_all_in_known": "3,103,376.96 KZT",
+        "total_minor": 310337696,
+        "deadline_buffer_bd": 0,
+        "operations": 4,
+        "needs_approval": [],
+        "remaining_fx_exposure_after_first": "33,750.00 CNY",
+        "constraints": {
+          "deadline": {
+            "pass": true,
+            "detail": "latest arrival 2026-08-27 vs latest safe 2026-08-27"
+          },
+          "quote_freshness": {
+            "pass": false,
+            "detail": "quote age 1440 min, TTL 30 min"
+          },
+          "liquidity_reserve": {
+            "pass": true,
+            "detail": "lowest headroom above reserve 196,623.04 KZT on 2026-08-24"
+          },
+          "beneficiary_verified": {
+            "pass": true,
+            "detail": "beneficiary status VERIFIED"
+          },
+          "route_allowed": {
+            "pass": true,
+            "detail": "route available and approved"
+          },
+          "kill_switch": {
+            "pass": true,
+            "detail": "off"
+          },
+          "hard_caps": {
+            "pass": true,
+            "detail": "within per-payment and 30-day caps"
+          },
+          "no_duplicate": {
+            "pass": true,
+            "detail": "no prior execution"
+          }
+        },
+        "failed": [
+          "quote_freshness: quote age 1440 min, TTL 30 min"
+        ],
+        "tranches": [
+          {
+            "index": 0,
+            "execution_date": "2026-08-17",
+            "target": "11,250.00 CNY",
+            "all_in_known": "775,844.24 KZT",
+            "arrival_range": [
+              "2026-08-19",
+              "2026-08-21"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 1125000,
+                "ccy": "CNY",
+                "display": "11,250.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 76013514,
+                "ccy": "KZT",
+                "display": "760,135.14 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 381977,
+                "ccy": "KZT",
+                "display": "3,819.77 KZT"
+              },
+              "variable_fee": {
+                "minor": 1145933,
+                "ccy": "KZT",
+                "display": "11,459.33 KZT"
+              },
+              "fixed_fee": {
+                "minor": 30000,
+                "ccy": "KZT",
+                "display": "300.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 13000,
+                "ccy": "KZT",
+                "display": "130.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 77584424,
+                "ccy": "KZT",
+                "display": "775,844.24 KZT"
+              },
+              "effective_rate": "68.963932",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01472600",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          },
+          {
+            "index": 1,
+            "execution_date": "2026-08-18",
+            "target": "11,250.00 CNY",
+            "all_in_known": "775,844.24 KZT",
+            "arrival_range": [
+              "2026-08-20",
+              "2026-08-24"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 1125000,
+                "ccy": "CNY",
+                "display": "11,250.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 76013514,
+                "ccy": "KZT",
+                "display": "760,135.14 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 381977,
+                "ccy": "KZT",
+                "display": "3,819.77 KZT"
+              },
+              "variable_fee": {
+                "minor": 1145933,
+                "ccy": "KZT",
+                "display": "11,459.33 KZT"
+              },
+              "fixed_fee": {
+                "minor": 30000,
+                "ccy": "KZT",
+                "display": "300.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 13000,
+                "ccy": "KZT",
+                "display": "130.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 77584424,
+                "ccy": "KZT",
+                "display": "775,844.24 KZT"
+              },
+              "effective_rate": "68.963932",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01472600",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          },
+          {
+            "index": 2,
+            "execution_date": "2026-08-20",
+            "target": "11,250.00 CNY",
+            "all_in_known": "775,844.24 KZT",
+            "arrival_range": [
+              "2026-08-24",
+              "2026-08-26"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 1125000,
+                "ccy": "CNY",
+                "display": "11,250.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 76013514,
+                "ccy": "KZT",
+                "display": "760,135.14 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 381977,
+                "ccy": "KZT",
+                "display": "3,819.77 KZT"
+              },
+              "variable_fee": {
+                "minor": 1145933,
+                "ccy": "KZT",
+                "display": "11,459.33 KZT"
+              },
+              "fixed_fee": {
+                "minor": 30000,
+                "ccy": "KZT",
+                "display": "300.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 13000,
+                "ccy": "KZT",
+                "display": "130.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 77584424,
+                "ccy": "KZT",
+                "display": "775,844.24 KZT"
+              },
+              "effective_rate": "68.963932",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01472600",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          },
+          {
+            "index": 3,
+            "execution_date": "2026-08-21",
+            "target": "11,250.00 CNY",
+            "all_in_known": "775,844.24 KZT",
+            "arrival_range": [
+              "2026-08-25",
+              "2026-08-27"
+            ],
+            "priced_with_shock": false,
+            "cost": {
+              "target": {
+                "minor": 1125000,
+                "ccy": "CNY",
+                "display": "11,250.00 CNY"
+              },
+              "principal_at_mid": {
+                "minor": 76013514,
+                "ccy": "KZT",
+                "display": "760,135.14 KZT"
+              },
+              "fx_spread_cost": {
+                "minor": 381977,
+                "ccy": "KZT",
+                "display": "3,819.77 KZT"
+              },
+              "variable_fee": {
+                "minor": 1145933,
+                "ccy": "KZT",
+                "display": "11,459.33 KZT"
+              },
+              "fixed_fee": {
+                "minor": 30000,
+                "ccy": "KZT",
+                "display": "300.00 KZT"
+              },
+              "intermediary_fee": {
+                "minor": 13000,
+                "ccy": "KZT",
+                "display": "130.00 KZT"
+              },
+              "all_in_known": {
+                "minor": 77584424,
+                "ccy": "KZT",
+                "display": "775,844.24 KZT"
+              },
+              "effective_rate": "68.963932",
+              "effective_rate_label": "KZT per 1 CNY, all-in",
+              "rate_used": {
+                "base": "KZT",
+                "quote": "CNY",
+                "value": "0.01472600",
+                "label": "CNY per 1 KZT"
+              },
+              "estimated_extras": [
+                "receiving-bank charges, if any, are not known (TBD)"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "quotes": [
+      {
+        "quote_id": "Q-R1-202608170300",
+        "route": {
+          "route_id": "R1",
+          "name": "Simulated bank wire",
+          "fixed_fee_minor": 100000,
+          "variable_fee_pct": "0.025",
+          "intermediary_fee_minor": 45000,
+          "fx_spread_pct": "0.012",
+          "arrival_bd": [
+            5,
+            7
+          ],
+          "supports_reference": true
+        },
+        "mid": {
+          "base": "KZT",
+          "quote": "CNY",
+          "value": "0.01480",
+          "label": "CNY per 1 KZT"
+        },
+        "quoted_at": "2026-08-17T03:00:00+00:00",
+        "expires_at": "2026-08-17T03:30:00+00:00",
+        "source": "FIXTURE",
+        "data_class": "SIMULATED",
+        "age_minutes": 0,
+        "freshness": "FRESH"
+      },
+      {
+        "quote_id": "Q-R2-202608170300",
+        "route": {
+          "route_id": "R2",
+          "name": "Simulated fintech transfer",
+          "fixed_fee_minor": 85000,
+          "variable_fee_pct": "0.02",
+          "intermediary_fee_minor": 18000,
+          "fx_spread_pct": "0.006",
+          "arrival_bd": [
+            2,
+            4
+          ],
+          "supports_reference": true
+        },
+        "mid": {
+          "base": "KZT",
+          "quote": "CNY",
+          "value": "0.01480",
+          "label": "CNY per 1 KZT"
+        },
+        "quoted_at": "2026-08-17T03:00:00+00:00",
+        "expires_at": "2026-08-17T03:30:00+00:00",
+        "source": "FIXTURE",
+        "data_class": "SIMULATED",
+        "age_minutes": 0,
+        "freshness": "FRESH"
+      },
+      {
+        "quote_id": "Q-R3-202608170300",
+        "route": {
+          "route_id": "R3",
+          "name": "Simulated multi-currency account",
+          "fixed_fee_minor": 50000,
+          "variable_fee_pct": "0.015",
+          "intermediary_fee_minor": 12000,
+          "fx_spread_pct": "0.004",
+          "arrival_bd": [
+            1,
+            3
+          ],
+          "supports_reference": true
+        },
+        "mid": {
+          "base": "KZT",
+          "quote": "CNY",
+          "value": "0.01480",
+          "label": "CNY per 1 KZT"
+        },
+        "quoted_at": "2026-08-17T03:00:00+00:00",
+        "expires_at": "2026-08-17T03:30:00+00:00",
+        "source": "FIXTURE",
+        "data_class": "SIMULATED",
+        "age_minutes": 0,
+        "freshness": "FRESH"
+      },
+      {
+        "quote_id": "Q-R4-202608170300",
+        "route": {
+          "route_id": "R4",
+          "name": "Cheap but slow route",
+          "fixed_fee_minor": 25000,
+          "variable_fee_pct": "0.01",
+          "intermediary_fee_minor": 10000,
+          "fx_spread_pct": "0.003",
+          "arrival_bd": [
+            7,
+            10
+          ],
+          "supports_reference": true
+        },
+        "mid": {
+          "base": "KZT",
+          "quote": "CNY",
+          "value": "0.01480",
+          "label": "CNY per 1 KZT"
+        },
+        "quoted_at": "2026-08-17T03:00:00+00:00",
+        "expires_at": "2026-08-17T03:30:00+00:00",
+        "source": "FIXTURE",
+        "data_class": "SIMULATED",
+        "age_minutes": 0,
+        "freshness": "FRESH"
+      },
+      {
+        "quote_id": "Q-R5-202608160300",
+        "route": {
+          "route_id": "R5",
+          "name": "Stale quote route",
+          "fixed_fee_minor": 30000,
+          "variable_fee_pct": "0.015",
+          "intermediary_fee_minor": 13000,
+          "fx_spread_pct": "0.005",
+          "arrival_bd": [
+            2,
+            4
+          ],
+          "supports_reference": true
+        },
+        "mid": {
+          "base": "KZT",
+          "quote": "CNY",
+          "value": "0.01480",
+          "label": "CNY per 1 KZT"
+        },
+        "quoted_at": "2026-08-16T03:00:00+00:00",
+        "expires_at": "2026-08-16T03:30:00+00:00",
+        "source": "FIXTURE",
+        "data_class": "SIMULATED",
+        "age_minutes": 1440,
+        "freshness": "STALE"
+      }
+    ],
+    "label": "SIMULATION — NO REAL MONEY MOVES"
+  },
+  "scenarios": [
+    {
+      "scenario": "Base case",
+      "group": "base",
+      "change": "fixtures as quoted",
+      "status": "FEASIBLE",
+      "selected": "R3 all_at_once",
+      "total": "3,099,162.83 KZT",
+      "total_minor": 309916283,
+      "deadline_buffer_bd": 5,
+      "lowest_headroom": "lowest headroom above reserve 200,837.17 KZT on 2026-08-24",
+      "feasible_candidates": 9,
+      "reasons_if_infeasible": [],
+      "cost_delta_vs_base": 0
+    },
+    {
+      "scenario": "FX +1%",
+      "group": "fx",
+      "change": "KZT weaker by 1% for tranches after the first execution date",
+      "status": "FEASIBLE",
+      "selected": "R3 all_at_once",
+      "total": "3,099,162.83 KZT",
+      "total_minor": 309916283,
+      "deadline_buffer_bd": 5,
+      "lowest_headroom": "lowest headroom above reserve 200,837.17 KZT on 2026-08-24",
+      "feasible_candidates": 9,
+      "reasons_if_infeasible": [],
+      "cost_delta_vs_base": 0
+    },
+    {
+      "scenario": "FX -1%",
+      "group": "fx",
+      "change": "KZT stronger by 1% for tranches after the first execution date",
+      "status": "FEASIBLE",
+      "selected": "R3 equal_in_window",
+      "total": "3,077,783.79 KZT",
+      "total_minor": 307778379,
+      "deadline_buffer_bd": 0,
+      "lowest_headroom": "lowest headroom above reserve 222,216.21 KZT on 2026-08-24",
+      "feasible_candidates": 9,
+      "reasons_if_infeasible": [],
+      "cost_delta_vs_base": -2137904
+    },
+    {
+      "scenario": "FX +3%",
+      "group": "fx",
+      "change": "KZT weaker by 3% for tranches after the first execution date",
+      "status": "FEASIBLE",
+      "selected": "R3 all_at_once",
+      "total": "3,099,162.83 KZT",
+      "total_minor": 309916283,
+      "deadline_buffer_bd": 5,
+      "lowest_headroom": "lowest headroom above reserve 200,837.17 KZT on 2026-08-24",
+      "feasible_candidates": 9,
+      "reasons_if_infeasible": [],
+      "cost_delta_vs_base": 0
+    },
+    {
+      "scenario": "FX -3%",
+      "group": "fx",
+      "change": "KZT stronger by 3% for tranches after the first execution date",
+      "status": "FEASIBLE",
+      "selected": "R3 equal_in_window",
+      "total": "3,031,305.66 KZT",
+      "total_minor": 303130566,
+      "deadline_buffer_bd": 0,
+      "lowest_headroom": "lowest headroom above reserve 268,694.34 KZT on 2026-08-24",
+      "feasible_candidates": 9,
+      "reasons_if_infeasible": [],
+      "cost_delta_vs_base": -6785717
+    },
+    {
+      "scenario": "FX +5%",
+      "group": "fx",
+      "change": "KZT weaker by 5% for tranches after the first execution date",
+      "status": "FEASIBLE",
+      "selected": "R3 all_at_once",
+      "total": "3,099,162.83 KZT",
+      "total_minor": 309916283,
+      "deadline_buffer_bd": 5,
+      "lowest_headroom": "lowest headroom above reserve 200,837.17 KZT on 2026-08-24",
+      "feasible_candidates": 9,
+      "reasons_if_infeasible": [],
+      "cost_delta_vs_base": 0
+    },
+    {
+      "scenario": "FX -5%",
+      "group": "fx",
+      "change": "KZT stronger by 5% for tranches after the first execution date",
+      "status": "FEASIBLE",
+      "selected": "R3 equal_in_window",
+      "total": "2,984,827.50 KZT",
+      "total_minor": 298482750,
+      "deadline_buffer_bd": 0,
+      "lowest_headroom": "lowest headroom above reserve 315,172.50 KZT on 2026-08-24",
+      "feasible_candidates": 9,
+      "reasons_if_infeasible": [],
+      "cost_delta_vs_base": -11433533
+    },
+    {
+      "scenario": "FX +10%",
+      "group": "fx",
+      "change": "KZT weaker by 10% for tranches after the first execution date",
+      "status": "FEASIBLE",
+      "selected": "R3 all_at_once",
+      "total": "3,099,162.83 KZT",
+      "total_minor": 309916283,
+      "deadline_buffer_bd": 5,
+      "lowest_headroom": "lowest headroom above reserve 200,837.17 KZT on 2026-08-24",
+      "feasible_candidates": 6,
+      "reasons_if_infeasible": [],
+      "cost_delta_vs_base": 0
+    },
+    {
+      "scenario": "FX -10%",
+      "group": "fx",
+      "change": "KZT stronger by 10% for tranches after the first execution date",
+      "status": "FEASIBLE",
+      "selected": "R3 equal_in_window",
+      "total": "2,868,632.13 KZT",
+      "total_minor": 286863213,
+      "deadline_buffer_bd": 0,
+      "lowest_headroom": "lowest headroom above reserve 431,367.87 KZT on 2026-08-24",
+      "feasible_candidates": 9,
+      "reasons_if_infeasible": [],
+      "cost_delta_vs_base": -23053070
+    },
+    {
+      "scenario": "Delay 1 business day",
+      "group": "delay",
+      "change": "every route arrives 1 business day(s) later",
+      "status": "FEASIBLE",
+      "selected": "R3 all_at_once",
+      "total": "3,099,162.83 KZT",
+      "total_minor": 309916283,
+      "deadline_buffer_bd": 4,
+      "lowest_headroom": "lowest headroom above reserve 200,837.17 KZT on 2026-08-24",
+      "feasible_candidates": 9,
+      "reasons_if_infeasible": [],
+      "cost_delta_vs_base": 0
+    },
+    {
+      "scenario": "Delay 3 business days",
+      "group": "delay",
+      "change": "every route arrives 3 business day(s) later",
+      "status": "FEASIBLE",
+      "selected": "R3 all_at_once",
+      "total": "3,099,162.83 KZT",
+      "total_minor": 309916283,
+      "deadline_buffer_bd": 2,
+      "lowest_headroom": "lowest headroom above reserve 200,837.17 KZT on 2026-08-24",
+      "feasible_candidates": 6,
+      "reasons_if_infeasible": [],
+      "cost_delta_vs_base": 0
+    },
+    {
+      "scenario": "Delay 5 business days",
+      "group": "delay",
+      "change": "every route arrives 5 business day(s) later",
+      "status": "FEASIBLE",
+      "selected": "R3 all_at_once",
+      "total": "3,099,162.83 KZT",
+      "total_minor": 309916283,
+      "deadline_buffer_bd": 0,
+      "lowest_headroom": "lowest headroom above reserve 200,837.17 KZT on 2026-08-24",
+      "feasible_candidates": 3,
+      "reasons_if_infeasible": [],
+      "cost_delta_vs_base": 0
+    },
+    {
+      "scenario": "Early rent",
+      "group": "liquidity",
+      "change": "rent and living costs due on the first day",
+      "status": "FEASIBLE",
+      "selected": "R3 equal_in_window",
+      "total": "3,101,022.84 KZT",
+      "total_minor": 310102284,
+      "deadline_buffer_bd": 0,
+      "lowest_headroom": "lowest headroom above reserve 198,977.16 KZT on 2026-08-24",
+      "feasible_candidates": 6,
+      "reasons_if_infeasible": [],
+      "cost_delta_vs_base": 186001
+    },
+    {
+      "scenario": "Sponsor funds 10 days late",
+      "group": "liquidity",
+      "change": "confirmed sponsor transfer arrives 10 days later",
+      "status": "INFEASIBLE",
+      "selected": null,
+      "total": null,
+      "total_minor": null,
+      "deadline_buffer_bd": null,
+      "lowest_headroom": null,
+      "feasible_candidates": 0,
+      "reasons_if_infeasible": [
+        "liquidity_reserve failed in 15 of 20 candidates",
+        "deadline failed in 8 of 20 candidates",
+        "quote_freshness failed in 4 of 20 candidates"
+      ]
+    },
+    {
+      "scenario": "Route outage R3",
+      "group": "operations",
+      "change": "route R3 unavailable",
+      "status": "FEASIBLE",
+      "selected": "R2 all_at_once",
+      "total": "3,121,101.79 KZT",
+      "total_minor": 312110179,
+      "deadline_buffer_bd": 4,
+      "lowest_headroom": "lowest headroom above reserve 178,898.21 KZT on 2026-08-24",
+      "feasible_candidates": 6,
+      "reasons_if_infeasible": [],
+      "cost_delta_vs_base": 2193896
+    },
+    {
+      "scenario": "Quotes go stale",
+      "group": "data",
+      "change": "60 minutes pass without a quote refresh",
+      "status": "INFEASIBLE",
+      "selected": null,
+      "total": null,
+      "total_minor": null,
+      "deadline_buffer_bd": null,
+      "lowest_headroom": null,
+      "feasible_candidates": 0,
+      "reasons_if_infeasible": [
+        "quote_freshness failed in 20 of 20 candidates",
+        "deadline failed in 8 of 20 candidates"
+      ]
+    },
+    {
+      "scenario": "Beneficiary details changed",
+      "group": "fraud",
+      "change": "latest payee version is unverified",
+      "status": "INFEASIBLE",
+      "selected": null,
+      "total": null,
+      "total_minor": null,
+      "deadline_buffer_bd": null,
+      "lowest_headroom": null,
+      "feasible_candidates": 0,
+      "reasons_if_infeasible": [
+        "beneficiary_verified failed in 20 of 20 candidates",
+        "deadline failed in 8 of 20 candidates",
+        "quote_freshness failed in 4 of 20 candidates"
+      ]
+    },
+    {
+      "scenario": "Counterfactual: start on 1 Aug",
+      "group": "counterfactual",
+      "change": "planning 16 days earlier (workbook dates)",
+      "status": "FEASIBLE",
+      "selected": "R4 all_at_once",
+      "total": "3,080,536.51 KZT",
+      "total_minor": 308053651,
+      "deadline_buffer_bd": 8,
+      "lowest_headroom": "lowest headroom above reserve 219,463.49 KZT on 2026-08-24",
+      "feasible_candidates": 13,
+      "reasons_if_infeasible": [],
+      "cost_delta_vs_base": -1862632
+    }
+  ],
+  "note": "Scenario outputs, not forecasts. No probabilities are implied.",
+  "label": "SIMULATION — NO REAL MONEY MOVES"
+}

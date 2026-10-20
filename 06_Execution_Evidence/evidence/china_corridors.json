@@ -1,0 +1,825 @@
+{
+  "contexts": {
+    "A": {
+      "context": "A",
+      "label": "Student in Kazakhstan pays a Chinese university",
+      "corridor": {
+        "status": "RESOLVED",
+        "corridor_id": "FROM_ABROAD_TO_CHINA",
+        "reason_codes": [],
+        "detail": "payer in KZ pays a university in mainland China"
+      },
+      "simulation": "SIMULATION — NO REAL MONEY MOVES",
+      "invoice": {
+        "amount": "45000.00",
+        "currency": "CNY",
+        "due": "2026-09-03",
+        "reference": "SDU-2026-AUT-104233",
+        "university_id": "demo-university-a"
+      },
+      "profile": {
+        "profile_id": "cn-in-demo-a",
+        "profile_version": 1,
+        "corridor_id": "FROM_ABROAD_TO_CHINA",
+        "sender_country": "*",
+        "receiver_country": "CN",
+        "university_id": "demo-university-a",
+        "university_name": "Shenzhen Demo University",
+        "invoice_currency": "CNY",
+        "status": "DEMO_FIXTURE"
+      },
+      "eligibility": {
+        "corridor_id": "FROM_ABROAD_TO_CHINA",
+        "eligibility_status": "READY",
+        "reason_codes": [],
+        "eligible_methods": [
+          "A-WIRE"
+        ],
+        "methods": [
+          {
+            "method_id": "A-WIRE",
+            "name": "International wire to the university CNY account",
+            "status": "ELIGIBLE",
+            "reason_codes": [],
+            "trace": [
+              "source DS-A-01 covers demo-university-a / FROM_ABROAD_TO_CHINA",
+              "all predicates passed within scope and freshness"
+            ],
+            "route_id": "R3",
+            "processing_bd": [
+              1,
+              3
+            ],
+            "source_id": "DS-A-01",
+            "caveats": [
+              "intermediary banks may deduct fees; receiving charges unknown"
+            ],
+            "data_quality": "SIMULATED"
+          },
+          {
+            "method_id": "A-CARD",
+            "name": "University online portal, foreign card",
+            "status": "STALE",
+            "reason_codes": [
+              "RULES_OUTDATED"
+            ],
+            "trace": [
+              "source DS-A-01 covers demo-university-a / FROM_ABROAD_TO_CHINA",
+              "method status valid until 2026-06-30, today 2026-08-17"
+            ],
+            "route_id": null,
+            "processing_bd": [
+              0,
+              2
+            ],
+            "source_id": "DS-A-01",
+            "caveats": [
+              "card limits and status update times vary"
+            ],
+            "data_quality": "SIMULATED"
+          },
+          {
+            "method_id": "A-WALLET",
+            "name": "Domestic mobile wallet",
+            "status": "INELIGIBLE",
+            "reason_codes": [
+              "METHOD_INELIGIBLE"
+            ],
+            "trace": [
+              "source DS-A-01 covers demo-university-a / FROM_ABROAD_TO_CHINA",
+              "needs mainland bank account, which the payer has not declared"
+            ],
+            "route_id": null,
+            "processing_bd": [
+              0,
+              1
+            ],
+            "source_id": "DS-A-01",
+            "caveats": [],
+            "data_quality": "SIMULATED"
+          },
+          {
+            "method_id": "A-EDU",
+            "name": "Education payment platform",
+            "status": "UNKNOWN",
+            "reason_codes": [
+              "METHOD_UNKNOWN"
+            ],
+            "trace": [
+              "source DS-A-01 covers demo-university-a / FROM_ABROAD_TO_CHINA",
+              "source does not say whether this method is available"
+            ],
+            "route_id": null,
+            "processing_bd": null,
+            "source_id": "DS-A-01",
+            "caveats": [],
+            "data_quality": "SIMULATED"
+          },
+          {
+            "method_id": "A-TSINGHUA",
+            "name": "Method copied from another university's page",
+            "status": "UNKNOWN",
+            "reason_codes": [
+              "SOURCE_SCOPE_MISMATCH"
+            ],
+            "trace": [
+              "source covers tsinghua, not demo-university-a"
+            ],
+            "route_id": null,
+            "processing_bd": null,
+            "source_id": "RS-TSINGHUA",
+            "caveats": [],
+            "data_quality": "UNKNOWN"
+          }
+        ],
+        "required_documents": [
+          {
+            "document": "admission_number",
+            "provided": true
+          },
+          {
+            "document": "tuition_invoice",
+            "provided": true
+          }
+        ],
+        "rules": [
+          {
+            "rule_id": "A-REF-01",
+            "kind": "REFERENCE",
+            "text": "Student number must appear in the payment reference",
+            "severity": "BLOCKING",
+            "source_id": "DS-A-02",
+            "requires": [],
+            "checked_at": "2026-08-10",
+            "valid_until": "2026-12-31",
+            "freshness": "FRESH",
+            "version": 1
+          },
+          {
+            "rule_id": "A-DOC-01",
+            "kind": "DOCUMENT",
+            "text": "Tuition invoice and admission number",
+            "severity": "BLOCKING",
+            "source_id": "DS-A-01",
+            "requires": [
+              "tuition_invoice",
+              "admission_number"
+            ],
+            "checked_at": "2026-08-10",
+            "valid_until": "2026-12-31",
+            "freshness": "FRESH",
+            "version": 1,
+            "missing": []
+          }
+        ],
+        "warnings": [],
+        "profile_version": 1,
+        "profile_id": "cn-in-demo-a",
+        "profile_status": "DEMO_FIXTURE",
+        "sources": [
+          {
+            "source_id": "DS-A-01",
+            "publisher": "Synthetic demo fixture",
+            "title": "Demo University A bursar page: payment methods",
+            "url": null,
+            "published_at": null,
+            "checked_at": "2026-08-10",
+            "scope": {
+              "university_id": "demo-university-a",
+              "corridor_id": "FROM_ABROAD_TO_CHINA"
+            },
+            "quality": "SIMULATED",
+            "status": "DEMO_FIXTURE"
+          },
+          {
+            "source_id": "DS-A-02",
+            "publisher": "Synthetic demo fixture",
+            "title": "Demo University A: payment reference rules",
+            "url": null,
+            "published_at": null,
+            "checked_at": "2026-08-10",
+            "scope": {
+              "university_id": "demo-university-a",
+              "corridor_id": "FROM_ABROAD_TO_CHINA"
+            },
+            "quality": "SIMULATED",
+            "status": "DEMO_FIXTURE"
+          },
+          {
+            "source_id": "RS-TSINGHUA",
+            "publisher": "Tsinghua University",
+            "title": "Payment instructions for international students",
+            "url": "https://xfzsf.tsinghua.edu.cn/xsglxt/lxs/wszf_sm.jsp",
+            "published_at": null,
+            "checked_at": null,
+            "scope": {
+              "university_id": "tsinghua",
+              "corridor_id": "FROM_ABROAD_TO_CHINA"
+            },
+            "quality": "UNKNOWN",
+            "status": "NOT_VERIFIED"
+          }
+        ],
+        "data_quality": "SIMULATED",
+        "decision_trace": [
+          "A-WIRE ELIGIBLE: all predicates passed within scope and freshness",
+          "A-CARD STALE: method status valid until 2026-06-30, today 2026-08-17",
+          "A-WALLET INELIGIBLE: needs mainland bank account, which the payer has not declared",
+          "A-EDU UNKNOWN: source does not say whether this method is available",
+          "A-TSINGHUA UNKNOWN: source covers tsinghua, not demo-university-a"
+        ],
+        "as_of": "2026-08-17"
+      },
+      "calendar": {
+        "tz": "Asia/Shanghai",
+        "supported": true,
+        "note": "demo holiday list; official calendar not yet loaded",
+        "holidays_loaded": 7
+      },
+      "deadlines": [
+        {
+          "method_id": "A-WIRE",
+          "due_date": "2026-09-03",
+          "timezone": "Asia/Shanghai",
+          "buffer_bd": 5,
+          "calendar_supported": true,
+          "caveats": [
+            "arrival is a range from fixture lead times, not a guarantee"
+          ],
+          "latest_safe_arrival": "2026-08-27",
+          "latest_initiation": "2026-08-24",
+          "arrival_range": [
+            "2026-08-18",
+            "2026-08-20"
+          ],
+          "status": "ON_TIME"
+        }
+      ]
+    },
+    "B": {
+      "context": "B",
+      "label": "Parent in China pays a university in Kazakhstan",
+      "corridor": {
+        "status": "RESOLVED",
+        "corridor_id": "FROM_CHINA_TO_ABROAD",
+        "reason_codes": [],
+        "detail": "payer in mainland China pays a university in KZ"
+      },
+      "simulation": "SIMULATION — NO REAL MONEY MOVES",
+      "invoice": {
+        "amount": "3040540.55",
+        "currency": "KZT",
+        "due": "2026-09-03",
+        "reference": "ADU-2026-INV-5531",
+        "university_id": "demo-university-b"
+      },
+      "profile": {
+        "profile_id": "cn-out-demo-b",
+        "profile_version": 1,
+        "corridor_id": "FROM_CHINA_TO_ABROAD",
+        "sender_country": "CN",
+        "receiver_country": "KZ",
+        "university_id": "demo-university-b",
+        "university_name": "Almaty Demo University",
+        "invoice_currency": "KZT",
+        "status": "DEMO_FIXTURE"
+      },
+      "eligibility": {
+        "corridor_id": "FROM_CHINA_TO_ABROAD",
+        "eligibility_status": "MISSING_DOCUMENTS",
+        "reason_codes": [
+          "MISSING_DOCUMENTS"
+        ],
+        "eligible_methods": [],
+        "methods": [
+          {
+            "method_id": "B-WIRE",
+            "name": "Outbound bank wire for tuition",
+            "status": "INELIGIBLE",
+            "reason_codes": [
+              "MISSING_DOCUMENTS"
+            ],
+            "trace": [
+              "source DS-B-01 covers demo-university-b / FROM_CHINA_TO_ABROAD",
+              "required documents incomplete"
+            ],
+            "route_id": null,
+            "processing_bd": [
+              2,
+              5
+            ],
+            "source_id": "DS-B-01",
+            "caveats": [
+              "bank reviews documents before sending"
+            ],
+            "data_quality": "SIMULATED"
+          },
+          {
+            "method_id": "B-APP",
+            "name": "Cross-border consumer app",
+            "status": "UNKNOWN",
+            "reason_codes": [
+              "METHOD_UNKNOWN"
+            ],
+            "trace": [
+              "source DS-B-01 covers demo-university-b / FROM_CHINA_TO_ABROAD",
+              "source does not say whether this method is available"
+            ],
+            "route_id": null,
+            "processing_bd": null,
+            "source_id": "DS-B-01",
+            "caveats": [],
+            "data_quality": "SIMULATED"
+          },
+          {
+            "method_id": "B-CARD",
+            "name": "Pay the university portal by card",
+            "status": "MANUAL_REVIEW",
+            "reason_codes": [
+              "MANUAL_REVIEW_REQUIRED"
+            ],
+            "trace": [
+              "source DS-B-02 covers demo-university-b / FROM_CHINA_TO_ABROAD",
+              "unknown whether the method carries the payment reference"
+            ],
+            "route_id": null,
+            "processing_bd": [
+              0,
+              2
+            ],
+            "source_id": "DS-B-02",
+            "caveats": [],
+            "data_quality": "SIMULATED"
+          }
+        ],
+        "required_documents": [
+          {
+            "document": "admission_letter",
+            "provided": true
+          },
+          {
+            "document": "relationship_proof",
+            "provided": false
+          },
+          {
+            "document": "tuition_invoice",
+            "provided": true
+          }
+        ],
+        "rules": [
+          {
+            "rule_id": "B-DOC-01",
+            "kind": "DOCUMENT",
+            "text": "Admission letter and tuition invoice for the outbound transfer",
+            "severity": "BLOCKING",
+            "source_id": "DS-B-01",
+            "requires": [
+              "admission_letter",
+              "tuition_invoice"
+            ],
+            "checked_at": "2026-08-10",
+            "valid_until": "2026-12-31",
+            "freshness": "FRESH",
+            "version": 1,
+            "missing": []
+          },
+          {
+            "rule_id": "B-DOC-02",
+            "kind": "DOCUMENT",
+            "text": "Proof of relationship when a parent or sponsor pays",
+            "severity": "BLOCKING",
+            "source_id": "DS-B-01",
+            "requires": [
+              "relationship_proof"
+            ],
+            "checked_at": "2026-08-10",
+            "valid_until": "2026-12-31",
+            "freshness": "FRESH",
+            "version": 1,
+            "missing": [
+              "relationship_proof"
+            ]
+          },
+          {
+            "rule_id": "B-REF-01",
+            "kind": "REFERENCE",
+            "text": "Invoice number in the payment details",
+            "severity": "BLOCKING",
+            "source_id": "DS-B-02",
+            "requires": [],
+            "checked_at": "2026-08-10",
+            "valid_until": "2026-12-31",
+            "freshness": "FRESH",
+            "version": 1
+          }
+        ],
+        "warnings": [],
+        "profile_version": 1,
+        "profile_id": "cn-out-demo-b",
+        "profile_status": "DEMO_FIXTURE",
+        "sources": [
+          {
+            "source_id": "DS-B-01",
+            "publisher": "Synthetic demo fixture",
+            "title": "Demo bank: outbound tuition remittance checklist",
+            "url": null,
+            "published_at": null,
+            "checked_at": "2026-08-10",
+            "scope": {
+              "university_id": "demo-university-b",
+              "corridor_id": "FROM_CHINA_TO_ABROAD"
+            },
+            "quality": "SIMULATED",
+            "status": "DEMO_FIXTURE"
+          },
+          {
+            "source_id": "DS-B-02",
+            "publisher": "Synthetic demo fixture",
+            "title": "Demo University B: tuition invoice and reference",
+            "url": null,
+            "published_at": null,
+            "checked_at": "2026-08-10",
+            "scope": {
+              "university_id": "demo-university-b",
+              "corridor_id": "FROM_CHINA_TO_ABROAD"
+            },
+            "quality": "SIMULATED",
+            "status": "DEMO_FIXTURE"
+          },
+          {
+            "source_id": "RS-SAFE",
+            "publisher": "State Administration of Foreign Exchange",
+            "title": "Official site (starting point)",
+            "url": "https://www.safe.gov.cn/en/",
+            "published_at": null,
+            "checked_at": null,
+            "scope": {
+              "corridor_id": "FROM_CHINA_TO_ABROAD"
+            },
+            "quality": "UNKNOWN",
+            "status": "NOT_VERIFIED"
+          }
+        ],
+        "data_quality": "SIMULATED",
+        "decision_trace": [
+          "B-WIRE INELIGIBLE: required documents incomplete",
+          "B-APP UNKNOWN: source does not say whether this method is available",
+          "B-CARD MANUAL_REVIEW: unknown whether the method carries the payment reference"
+        ],
+        "as_of": "2026-08-17"
+      },
+      "calendar": {
+        "tz": "Asia/Almaty",
+        "supported": true,
+        "note": "weekends only; holidays not loaded",
+        "holidays_loaded": 0
+      },
+      "deadlines": []
+    },
+    "B_with_document": {
+      "context": "B",
+      "label": "Parent in China pays a university in Kazakhstan",
+      "corridor": {
+        "status": "RESOLVED",
+        "corridor_id": "FROM_CHINA_TO_ABROAD",
+        "reason_codes": [],
+        "detail": "payer in mainland China pays a university in KZ"
+      },
+      "simulation": "SIMULATION — NO REAL MONEY MOVES",
+      "invoice": {
+        "amount": "3040540.55",
+        "currency": "KZT",
+        "due": "2026-09-03",
+        "reference": "ADU-2026-INV-5531",
+        "university_id": "demo-university-b"
+      },
+      "profile": {
+        "profile_id": "cn-out-demo-b",
+        "profile_version": 1,
+        "corridor_id": "FROM_CHINA_TO_ABROAD",
+        "sender_country": "CN",
+        "receiver_country": "KZ",
+        "university_id": "demo-university-b",
+        "university_name": "Almaty Demo University",
+        "invoice_currency": "KZT",
+        "status": "DEMO_FIXTURE"
+      },
+      "eligibility": {
+        "corridor_id": "FROM_CHINA_TO_ABROAD",
+        "eligibility_status": "READY",
+        "reason_codes": [],
+        "eligible_methods": [
+          "B-WIRE"
+        ],
+        "methods": [
+          {
+            "method_id": "B-WIRE",
+            "name": "Outbound bank wire for tuition",
+            "status": "ELIGIBLE",
+            "reason_codes": [],
+            "trace": [
+              "source DS-B-01 covers demo-university-b / FROM_CHINA_TO_ABROAD",
+              "all predicates passed within scope and freshness"
+            ],
+            "route_id": null,
+            "processing_bd": [
+              2,
+              5
+            ],
+            "source_id": "DS-B-01",
+            "caveats": [
+              "bank reviews documents before sending"
+            ],
+            "data_quality": "SIMULATED"
+          },
+          {
+            "method_id": "B-APP",
+            "name": "Cross-border consumer app",
+            "status": "UNKNOWN",
+            "reason_codes": [
+              "METHOD_UNKNOWN"
+            ],
+            "trace": [
+              "source DS-B-01 covers demo-university-b / FROM_CHINA_TO_ABROAD",
+              "source does not say whether this method is available"
+            ],
+            "route_id": null,
+            "processing_bd": null,
+            "source_id": "DS-B-01",
+            "caveats": [],
+            "data_quality": "SIMULATED"
+          },
+          {
+            "method_id": "B-CARD",
+            "name": "Pay the university portal by card",
+            "status": "MANUAL_REVIEW",
+            "reason_codes": [
+              "MANUAL_REVIEW_REQUIRED"
+            ],
+            "trace": [
+              "source DS-B-02 covers demo-university-b / FROM_CHINA_TO_ABROAD",
+              "unknown whether the method carries the payment reference"
+            ],
+            "route_id": null,
+            "processing_bd": [
+              0,
+              2
+            ],
+            "source_id": "DS-B-02",
+            "caveats": [],
+            "data_quality": "SIMULATED"
+          }
+        ],
+        "required_documents": [
+          {
+            "document": "admission_letter",
+            "provided": true
+          },
+          {
+            "document": "relationship_proof",
+            "provided": true
+          },
+          {
+            "document": "tuition_invoice",
+            "provided": true
+          }
+        ],
+        "rules": [
+          {
+            "rule_id": "B-DOC-01",
+            "kind": "DOCUMENT",
+            "text": "Admission letter and tuition invoice for the outbound transfer",
+            "severity": "BLOCKING",
+            "source_id": "DS-B-01",
+            "requires": [
+              "admission_letter",
+              "tuition_invoice"
+            ],
+            "checked_at": "2026-08-10",
+            "valid_until": "2026-12-31",
+            "freshness": "FRESH",
+            "version": 1,
+            "missing": []
+          },
+          {
+            "rule_id": "B-DOC-02",
+            "kind": "DOCUMENT",
+            "text": "Proof of relationship when a parent or sponsor pays",
+            "severity": "BLOCKING",
+            "source_id": "DS-B-01",
+            "requires": [
+              "relationship_proof"
+            ],
+            "checked_at": "2026-08-10",
+            "valid_until": "2026-12-31",
+            "freshness": "FRESH",
+            "version": 1,
+            "missing": []
+          },
+          {
+            "rule_id": "B-REF-01",
+            "kind": "REFERENCE",
+            "text": "Invoice number in the payment details",
+            "severity": "BLOCKING",
+            "source_id": "DS-B-02",
+            "requires": [],
+            "checked_at": "2026-08-10",
+            "valid_until": "2026-12-31",
+            "freshness": "FRESH",
+            "version": 1
+          }
+        ],
+        "warnings": [],
+        "profile_version": 1,
+        "profile_id": "cn-out-demo-b",
+        "profile_status": "DEMO_FIXTURE",
+        "sources": [
+          {
+            "source_id": "DS-B-01",
+            "publisher": "Synthetic demo fixture",
+            "title": "Demo bank: outbound tuition remittance checklist",
+            "url": null,
+            "published_at": null,
+            "checked_at": "2026-08-10",
+            "scope": {
+              "university_id": "demo-university-b",
+              "corridor_id": "FROM_CHINA_TO_ABROAD"
+            },
+            "quality": "SIMULATED",
+            "status": "DEMO_FIXTURE"
+          },
+          {
+            "source_id": "DS-B-02",
+            "publisher": "Synthetic demo fixture",
+            "title": "Demo University B: tuition invoice and reference",
+            "url": null,
+            "published_at": null,
+            "checked_at": "2026-08-10",
+            "scope": {
+              "university_id": "demo-university-b",
+              "corridor_id": "FROM_CHINA_TO_ABROAD"
+            },
+            "quality": "SIMULATED",
+            "status": "DEMO_FIXTURE"
+          },
+          {
+            "source_id": "RS-SAFE",
+            "publisher": "State Administration of Foreign Exchange",
+            "title": "Official site (starting point)",
+            "url": "https://www.safe.gov.cn/en/",
+            "published_at": null,
+            "checked_at": null,
+            "scope": {
+              "corridor_id": "FROM_CHINA_TO_ABROAD"
+            },
+            "quality": "UNKNOWN",
+            "status": "NOT_VERIFIED"
+          }
+        ],
+        "data_quality": "SIMULATED",
+        "decision_trace": [
+          "B-WIRE ELIGIBLE: all predicates passed within scope and freshness",
+          "B-APP UNKNOWN: source does not say whether this method is available",
+          "B-CARD MANUAL_REVIEW: unknown whether the method carries the payment reference"
+        ],
+        "as_of": "2026-08-17"
+      },
+      "calendar": {
+        "tz": "Asia/Almaty",
+        "supported": true,
+        "note": "weekends only; holidays not loaded",
+        "holidays_loaded": 0
+      },
+      "deadlines": [
+        {
+          "method_id": "B-WIRE",
+          "due_date": "2026-09-03",
+          "timezone": "Asia/Almaty",
+          "buffer_bd": 3,
+          "calendar_supported": true,
+          "caveats": [
+            "arrival is a range from fixture lead times, not a guarantee"
+          ],
+          "latest_safe_arrival": "2026-08-31",
+          "latest_initiation": "2026-08-24",
+          "arrival_range": [
+            "2026-08-19",
+            "2026-08-24"
+          ],
+          "status": "ON_TIME"
+        }
+      ]
+    }
+  },
+  "resolver_examples": {
+    "KZ→DE": {
+      "status": "NOT_SUPPORTED",
+      "corridor_id": null,
+      "reason_codes": [
+        "CORRIDOR_UNSUPPORTED"
+      ],
+      "detail": "KZ → DE is not covered by the China-first pack"
+    },
+    "missing sender": {
+      "status": "NEEDS_INPUT",
+      "corridor_id": null,
+      "reason_codes": [
+        "CORRIDOR_AMBIGUOUS"
+      ],
+      "question": "Please provide: sender_country"
+    }
+  },
+  "research_sources": [
+    {
+      "source_id": "RS-TSINGHUA",
+      "publisher": "Tsinghua University",
+      "title": "Payment instructions for international students",
+      "url": "https://xfzsf.tsinghua.edu.cn/xsglxt/lxs/wszf_sm.jsp",
+      "published_at": null,
+      "checked_at": null,
+      "scope": {
+        "university_id": "tsinghua",
+        "corridor_id": "FROM_ABROAD_TO_CHINA"
+      },
+      "quality": "UNKNOWN",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "source_id": "RS-PKU",
+      "publisher": "Peking University",
+      "title": "Tuition payment (international students)",
+      "url": "https://isdplus.pku.edu.cn/ORIENTATION/English/UPON_YOUR_ARRIVAL/Tuition_Payment.htm",
+      "published_at": null,
+      "checked_at": null,
+      "scope": {
+        "university_id": "pku",
+        "corridor_id": "FROM_ABROAD_TO_CHINA"
+      },
+      "quality": "UNKNOWN",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "source_id": "RS-XJTU",
+      "publisher": "Xi'an Jiaotong University",
+      "title": "Online payment methods",
+      "url": "https://sie.xjtu.edu.cn/en/info/1141/3022.htm",
+      "published_at": null,
+      "checked_at": null,
+      "scope": {
+        "university_id": "xjtu",
+        "corridor_id": "FROM_ABROAD_TO_CHINA"
+      },
+      "quality": "UNKNOWN",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "source_id": "RS-SAFE",
+      "publisher": "State Administration of Foreign Exchange",
+      "title": "Official site (starting point)",
+      "url": "https://www.safe.gov.cn/en/",
+      "published_at": null,
+      "checked_at": null,
+      "scope": {
+        "corridor_id": "FROM_CHINA_TO_ABROAD"
+      },
+      "quality": "UNKNOWN",
+      "status": "NOT_VERIFIED"
+    }
+  ],
+  "profiles": [
+    {
+      "profile_id": "cn-in-demo-a",
+      "profile_version": 1,
+      "corridor_id": "FROM_ABROAD_TO_CHINA",
+      "sender_country": "*",
+      "receiver_country": "CN",
+      "university_id": "demo-university-a",
+      "university_name": "Shenzhen Demo University",
+      "invoice_currency": "CNY",
+      "status": "DEMO_FIXTURE",
+      "versions": 1
+    },
+    {
+      "profile_id": "cn-out-demo-b",
+      "profile_version": 1,
+      "corridor_id": "FROM_CHINA_TO_ABROAD",
+      "sender_country": "CN",
+      "receiver_country": "KZ",
+      "university_id": "demo-university-b",
+      "university_name": "Almaty Demo University",
+      "invoice_currency": "KZT",
+      "status": "DEMO_FIXTURE",
+      "versions": 1
+    }
+  ],
+  "versioning": {
+    "v1_buffer_bd": 5,
+    "edit_after_use": "cn-in-demo-a v1 was used by a run; publish v2 instead",
+    "v2_buffer_bd": 4,
+    "versions": [
+      1,
+      2
+    ],
+    "old_run_keeps": "v1 (5 business-day buffer)"
+  }
+}

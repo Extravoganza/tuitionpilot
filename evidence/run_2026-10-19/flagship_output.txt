@@ -1,0 +1,25 @@
+ 1. Load invoice
+    A fictional invoice for 45,000.00 CNY due 2026-09-03 is loaded.
+ 2. Parse as untrusted data and compare with the verified payee
+    Invoice fields match the independently verified beneficiary version (MATCH_VERIFIED).
+ 3. Compare five routes
+    Five routes are itemised. R4 is cheapest but late; R5's quote is stale; both are rejected.
+ 4. Generate plans and select
+    Selected R3 all_at_once at 3,099,162.83 KZT; 11 of 20 candidates are infeasible.
+ 5. Stress FX ±5% and 3-day delay
+    Scenario outputs, not forecasts.
+ 6. Changed beneficiary details are blocked
+    A phishing invoice is denied for prompt injection (POL-018). A polite invoice with a new account creates a new, unverified beneficiary version and is denied too (POL-010); even if the student switched to it, a 48-hour hold applies until an independent callback (POL-011).
+ 7. Above the autonomous cap: exact approval required
+    Without approval the payment does not execute; an exact-action challenge is issued.
+ 8. Amount changed after approval: approval invalidated
+    The original approval no longer redeems; a new one is required for the exact action.
+ 9. Execute once, time out, retry: no duplicate
+    One execution record, one simulated debit, after a timeout and two retries.
+10. Verify the hash chain
+    Every event links to the previous one; a checkpoint is exported for tail-deletion checks.
+
+ledger: {'ok': True, 'events': 18, 'head_hash': '8b581931f62860fcb110d7c72bfb58b078d40170ca24382ddc29a128fa7d03fd'}
+output hash: a197a326e51a8b346585629f03f3f8c278a4e2bd1683a8cfff4d5a9088cec95f
+files written to evidence/
+SIMULATION — NO REAL MONEY MOVES

@@ -1,0 +1,39 @@
+{
+  "paths": 300,
+  "need": "45,000 CNY from KZT, 40-day deadline",
+  "saving_vs_bank_wire_day1": {
+    "mean_pct": 1.488,
+    "median_pct": 1.893,
+    "p5_pct": -1.846,
+    "p95_pct": 3.793,
+    "share_worse": 0.193
+  },
+  "saving_vs_best_direct_day1": {
+    "mean_pct": 0.802,
+    "median_pct": 1.205,
+    "p5_pct": -2.555,
+    "p95_pct": 3.121,
+    "share_worse": 0.277
+  },
+  "fx_timing_vs_wallet_lump_sum": {
+    "mean_pct": 0.001,
+    "median_pct": 0.408,
+    "p5_pct": -3.382,
+    "p95_pct": 2.339,
+    "share_worse": 0.417
+  },
+  "saving_vs_bank_wire_at_deadline": {
+    "mean_pct": 1.305,
+    "median_pct": 1.531,
+    "p5_pct": -4.325,
+    "p95_pct": 6.085,
+    "share_worse": 0.33
+  },
+  "timing_risk_stdev_pct": {
+    "tranche_plan": 1.844,
+    "single_wire_at_deadline": 4.459,
+    "risk_reduction_pct": 58.6
+  },
+  "deadline_met": "100% of paths (asserted)",
+  "note": "Simulated random-walk rates, so no strategy can predict the market: the timing effect is ~0 on average. The measurable value is (1) lower fees from routing and (2) lower timing risk than one conversion at the deadline. Users who want certainty can lock the full amount on day 1 (cautious mode)."
+}

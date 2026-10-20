@@ -1,0 +1,151 @@
+{
+  "payment": {
+    "payment_id": "PAY-0001",
+    "status": "CREDITED_SIMULATED",
+    "timeline": [
+      {
+        "status": "DRAFT",
+        "at": "2026-08-17T03:00:00+00:00",
+        "note": "created from plan",
+        "source": "SANDBOX",
+        "label": "SIMULATION — NO REAL MONEY MOVES"
+      },
+      {
+        "status": "READY_FOR_APPROVAL",
+        "at": "2026-08-17T03:00:00+00:00",
+        "note": "all gates passed; above autonomous cap",
+        "source": "SANDBOX",
+        "label": "SIMULATION — NO REAL MONEY MOVES"
+      },
+      {
+        "status": "APPROVED",
+        "at": "2026-08-17T03:00:00+00:00",
+        "note": "student approved the exact fingerprint",
+        "source": "USER",
+        "label": "SIMULATION — NO REAL MONEY MOVES",
+        "fingerprint": "b17dd9c1ec2b3697"
+      },
+      {
+        "status": "SUBMITTED_SIMULATED",
+        "at": "2026-08-17T03:00:00+00:00",
+        "note": "sandbox accepted EXE-0001",
+        "source": "SANDBOX",
+        "label": "SIMULATION — NO REAL MONEY MOVES"
+      },
+      {
+        "status": "PROCESSING_SIMULATED",
+        "at": "2026-08-17T05:00:00+00:00",
+        "note": "simulated provider processing",
+        "source": "SANDBOX",
+        "label": "SIMULATION — NO REAL MONEY MOVES"
+      },
+      {
+        "status": "SENT_SIMULATED",
+        "at": "2026-08-18T01:00:00+00:00",
+        "note": "simulated provider sent the funds",
+        "source": "SANDBOX",
+        "label": "SIMULATION — NO REAL MONEY MOVES"
+      },
+      {
+        "status": "CREDIT_PENDING",
+        "at": "2026-08-18T01:00:00+00:00",
+        "note": "waiting for credit confirmation",
+        "source": "SANDBOX",
+        "label": "SIMULATION — NO REAL MONEY MOVES"
+      },
+      {
+        "status": "CREDITED_SIMULATED",
+        "at": "2026-08-19T01:00:00+00:00",
+        "note": "exact match on amount, currency, payee, reference, window",
+        "source": "SANDBOX",
+        "label": "SIMULATION — NO REAL MONEY MOVES"
+      }
+    ],
+    "settled_before_credit": false,
+    "settled": true,
+    "pending_check": {
+      "status": "CREDIT_PENDING",
+      "reason_codes": [],
+      "candidates": [],
+      "note": "no credit event yet: the payment is submitted, not credited"
+    },
+    "reconciliation": {
+      "status": "RECONCILED",
+      "reason_codes": [],
+      "matched": {
+        "credit": {
+          "amount": "45,000.00 CNY",
+          "beneficiary_version_id": "BV-e84abc43c2b5",
+          "reference": "SDU-2026-AUT-104233",
+          "date": "2026-08-19",
+          "source": "SANDBOX"
+        },
+        "differences": []
+      },
+      "candidates": []
+    }
+  },
+  "fuzzy_case": {
+    "payment_id": "PAY-0002",
+    "status": "RECONCILIATION_REQUIRED",
+    "reconciliation": {
+      "status": "RECONCILIATION_REQUIRED",
+      "reason_codes": [
+        "AMOUNT_MISMATCH",
+        "REFERENCE_MISMATCH"
+      ],
+      "candidates": [
+        {
+          "credit": {
+            "amount": "44,950.00 CNY",
+            "beneficiary_version_id": "BV-e84abc43c2b5",
+            "reference": "SDU-2026-AUT-10423",
+            "date": "2026-08-19",
+            "source": "SANDBOX"
+          },
+          "differences": [
+            "AMOUNT_MISMATCH",
+            "REFERENCE_MISMATCH"
+          ]
+        }
+      ],
+      "note": "candidates need a person; nothing is closed automatically"
+    }
+  },
+  "execution": {
+    "state": "SIMULATED_SUBMITTED",
+    "decision": "ALLOW",
+    "execution_id": "EXE-0001",
+    "intent_id": "PI-0001",
+    "attempts": 1,
+    "environment": "SIMULATION",
+    "label": "SIMULATION — NO REAL MONEY MOVES"
+  },
+  "approval_screen": {
+    "amount_debited": "3,099,162.83 KZT",
+    "amount_credited": "45,000.00 CNY",
+    "currency_pair": "KZT/CNY",
+    "recipient": {
+      "version_id": "BV-e84abc43c2b5",
+      "version": 1,
+      "legal_name": "Shenzhen Demo University",
+      "account": "•••• 3333",
+      "bank_bic": "DEMOCNSZXXX",
+      "country": "CN",
+      "currency": "CNY",
+      "created_at": "2026-04-01T03:00:00+00:00",
+      "origin": "onboarding"
+    },
+    "route": "Simulated multi-currency account",
+    "quote_id": "Q-R3-202608170300",
+    "quote_expires_at": "2026-08-17T03:30:00+00:00",
+    "estimated_arrival": [
+      "2026-08-18",
+      "2026-08-20"
+    ],
+    "reference": "SDU-2026-AUT-104233",
+    "approval_expires_in_minutes": 15,
+    "consent_prechecked": false,
+    "label": "SIMULATION — NO REAL MONEY MOVES"
+  }
+}

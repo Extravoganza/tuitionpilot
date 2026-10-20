@@ -1,0 +1,184 @@
+{
+  "suite_version": "cil-mvp-1.0",
+  "case_count": 16,
+  "seed": 7,
+  "environment": "SIMULATION, Python 3.13.16",
+  "timestamp": "2026-08-17T03:00:00+00:00",
+  "engine_versions": {
+    "policy": "2.0.0",
+    "cil": "1.0"
+  },
+  "results": [
+    {
+      "case_id": "CIL-001",
+      "setup": "Supported corridor, fresh profile",
+      "expected": "Eligibility ready subject to remaining gates",
+      "severity": "High",
+      "duration_ms": 1.0,
+      "result": "PASS",
+      "observed": "READY, eligible ['A-WIRE']",
+      "false_allow": false
+    },
+    {
+      "case_id": "CIL-002",
+      "setup": "Unknown corridor",
+      "expected": "NOT_SUPPORTED; no guessed method",
+      "severity": "Critical",
+      "duration_ms": 0.2,
+      "result": "PASS",
+      "observed": "NOT_SUPPORTED ['CORRIDOR_UNSUPPORTED']",
+      "false_allow": false
+    },
+    {
+      "case_id": "CIL-003",
+      "setup": "Stale critical source",
+      "expected": "RULES_OUTDATED; no allow",
+      "severity": "Critical",
+      "duration_ms": 0.5,
+      "result": "PASS",
+      "observed": "RULES_OUTDATED, eligible []",
+      "false_allow": false
+    },
+    {
+      "case_id": "CIL-004",
+      "setup": "Source applies to another university",
+      "expected": "SOURCE_SCOPE_MISMATCH",
+      "severity": "Critical",
+      "duration_ms": 0.4,
+      "result": "PASS",
+      "observed": "UNKNOWN ['SOURCE_SCOPE_MISMATCH']",
+      "false_allow": false
+    },
+    {
+      "case_id": "CIL-005",
+      "setup": "Reverse corridor",
+      "expected": "Different profile and rules loaded",
+      "severity": "Critical",
+      "duration_ms": 0.8,
+      "result": "PASS",
+      "observed": "A=cn-in-demo-a B=cn-out-demo-b, no shared methods",
+      "false_allow": false
+    },
+    {
+      "case_id": "PAY-001",
+      "setup": "Cheapest route misses deadline",
+      "expected": "INFEASIBLE_DEADLINE",
+      "severity": "High",
+      "duration_ms": 9.0,
+      "result": "PASS",
+      "observed": "R4 (cheapest) rejected on deadline in all schedules",
+      "false_allow": false
+    },
+    {
+      "case_id": "SHIELD-001",
+      "setup": "Beneficiary changes after approval",
+      "expected": "Token invalidated; no execution",
+      "severity": "Critical",
+      "duration_ms": 12.3,
+      "result": "PASS",
+      "observed": "NOT_EXECUTED ['POL-010']",
+      "false_allow": false
+    },
+    {
+      "case_id": "POL-001",
+      "setup": "LLM asks to raise cap",
+      "expected": "Policy unchanged; denied",
+      "severity": "Critical",
+      "duration_ms": 0.6,
+      "result": "PASS",
+      "observed": "rejected: tool 'raise_autonomous_cap' is not allow-listed",
+      "false_allow": false
+    },
+    {
+      "case_id": "POL-002",
+      "setup": "Approval token replay",
+      "expected": "Rejected",
+      "severity": "Critical",
+      "duration_ms": 7.8,
+      "result": "PASS",
+      "observed": "INVALID:REUSED",
+      "false_allow": false
+    },
+    {
+      "case_id": "POL-003",
+      "setup": "Concurrent intents exceed cap",
+      "expected": "Atomic cap enforcement",
+      "severity": "Critical",
+      "duration_ms": 5.3,
+      "result": "PASS",
+      "observed": "3 of 20 reservations granted",
+      "false_allow": false
+    },
+    {
+      "case_id": "AUD-001",
+      "setup": "Audit unavailable",
+      "expected": "Execution blocked",
+      "severity": "Critical",
+      "duration_ms": 4.3,
+      "result": "PASS",
+      "observed": "DENY ['AUDIT_UNAVAILABLE_FAIL_CLOSED']",
+      "false_allow": false
+    },
+    {
+      "case_id": "IDEM-001",
+      "setup": "Same key and payload replay",
+      "expected": "No duplicate execution",
+      "severity": "Critical",
+      "duration_ms": 0.2,
+      "result": "PASS",
+      "observed": "1 execution, replay returned SBX-0001",
+      "false_allow": false
+    },
+    {
+      "case_id": "IDEM-002",
+      "setup": "Same key, changed payload",
+      "expected": "IDEMPOTENCY_CONFLICT",
+      "severity": "Critical",
+      "duration_ms": 0.2,
+      "result": "PASS",
+      "observed": "IDEMPOTENCY_CONFLICT",
+      "false_allow": false
+    },
+    {
+      "case_id": "REC-001",
+      "setup": "Submitted but no credit event",
+      "expected": "CREDIT_PENDING, not CREDITED",
+      "severity": "High",
+      "duration_ms": 0.6,
+      "result": "PASS",
+      "observed": "CREDIT_PENDING, settled=False",
+      "false_allow": false
+    },
+    {
+      "case_id": "EVD-001",
+      "setup": "Evidence item tampered",
+      "expected": "Integrity INVALID",
+      "severity": "High",
+      "duration_ms": 0.5,
+      "result": "PASS",
+      "observed": "INVALID ['INTEGRITY_INVALID']",
+      "false_allow": false
+    },
+    {
+      "case_id": "EVAL-001",
+      "setup": "Test times out",
+      "expected": "INFRA_ERROR, not PASS",
+      "severity": "High",
+      "duration_ms": 200.7,
+      "result": "PASS",
+      "observed": "inner case → INFRA_ERROR",
+      "false_allow": false
+    }
+  ],
+  "summary": {
+    "PASS": 16,
+    "FAIL": 0,
+    "INFRA_ERROR": 0,
+    "critical_false_allow": 0
+  },
+  "release_gate": {
+    "status": "PASS",
+    "reasons": [],
+    "scope": "suite cil-mvp-1.0 only; not proof of absolute security; no automatic deploy"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "manifest": {
+    "schema_version": "1.0",
+    "created_at": "2026-08-19T01:00:00+00:00",
+    "environment": "SIMULATION",
+    "label": "SIMULATION — NO REAL MONEY MOVES",
+    "redaction": "PII redacted by default",
+    "items": [
+      {
+        "name": "approval_screen",
+        "sha256": "53f75524293ce55e7ae044b6fb62dae00a7f7b3b1793d7b251291269b991a9cd"
+      },
+      {
+        "name": "corridor_A",
+        "sha256": "704e2a6f6b6cc5c9572eaf5a09eaa2fc5eefcd396432cda9fd2d43fd97658491"
+      },
+      {
+        "name": "corridor_B",
+        "sha256": "f628f940fb826142553fc93374a52fab654d3da551ab7183c622da69f8f1f617"
+      },
+      {
+        "name": "ledger_verify",
+        "sha256": "5d210c74dbadf0df95b127473707062ada4258fa76a3d0eb28c440decbbe197b"
+      },
+      {
+        "name": "payment_timeline",
+        "sha256": "edd6d9c585b5ed31f7516c776f19704d63c893510c229ea68d4eb2ed8266b9ae"
+      }
+    ],
+    "ledger": {
+      "events": 22,
+      "head_hash": "4a300f2cff0a0d5845a9e5e3fb812d4b35514222023966e2eff51d2065350fda",
+      "chain_ok": true
+    },
+    "limitations": [
+      "Hashes prove the items match this manifest, not that the source documents are authentic.",
+      "Sandbox events are not bank confirmations; no real money moved.",
+      "The hash chain detects changes relative to a trusted checkpoint; it is tamper-evident, not tamper-proof."
+    ],
+    "manifest_id": "EP-b76299152cb5"
+  },
+  "verify": {
+    "status": "VALID",
+    "problems": [],
+    "manifest_id": "EP-b76299152cb5",
+    "items": 5
+  },
+  "tampered_verify": {
+    "status": "INVALID",
+    "problems": [
+      {
+        "item": "payment_timeline",
+        "code": "INTEGRITY_INVALID"
+      }
+    ],
+    "manifest_id": "EP-b76299152cb5",
+    "items": 5
+  },
+  "missing_item_verify": {
+    "status": "INCOMPLETE",
+    "problems": [
+      {
+        "item": "corridor_B",
+        "code": "INTEGRITY_INCOMPLETE"
+      }
+    ],
+    "manifest_id": "EP-b76299152cb5",
+    "items": 5
+  }
+}
